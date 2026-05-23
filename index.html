@@ -189,7 +189,7 @@ body::before{
     box-shadow:
         0 6px 18px rgba(0,0,0,0.4);
 
-    overflow:hidden;
+    overflow:visible;
 }
 
 .box-content{
@@ -221,11 +221,16 @@ body::before{
     flex:1;
 
     white-space:normal;
-    overflow:hidden;
 
-    display:-webkit-box;
-    -webkit-line-clamp:2;   /* maksimal 2 baris */
-    -webkit-box-orient:vertical;
+    word-break:break-word;
+
+    overflow-wrap:break-word;
+
+    display:block;
+
+    line-height:1.5;
+
+    padding-right:90px;
 }
 
 .copy-btn{
@@ -325,6 +330,8 @@ body::before{
     gap:12px;
 
     width:100%;
+
+    align-items:start;
 }
 
 @media(max-width:1200px){
@@ -472,8 +479,8 @@ Link Sharelok: `)">
 		
 
         <div class="box">
-            <span>langsung di salin saja formnya dan bosku tinggal isi alamat  lengkap didalamnya, sertakan patokan rumahnya misal rumah bosku dekat sekolah, rumah sakit, masjid atau bangunan lain yang mudah ditemukan</span>
-            <button class="copy-btn" onclick="copyText(this, 'langsung di salin saja formnya dan bosku tinggal isi alamat  lengkap didalamnya, sertakan patokan rumahnya misal rumah bosku dekat sekolah, rumah sakit, masjid atau bangunan lain yang mudah ditemukan')">COPY</button>
+            <span>di salin saja formnya dan bosku tinggal isi alamat lengkapnya, sertakan patokan rumahnya misal rumah bosku dekat sekolah, rumah sakit, masjid atau bangunan lain yang mudah ditemukan</span>
+            <button class="copy-btn" onclick="copyText(this, 'di salin saja formnya dan bosku tinggal isi alamat lengkapnya, sertakan patokan rumahnya misal rumah bosku dekat sekolah, rumah sakit, masjid atau bangunan lain yang mudah ditemukan')">COPY</button>
         </div>
 		
 		<div class="box">
@@ -531,7 +538,20 @@ Link Facebook: https://www.facebook.com/groups/minitotogroup2`)">
             <button class="copy-btn" onclick="copyText(this, 'silakan lanjut konfirmasi dan claim di whatsapp ya bosku')">COPY</button>
         </div>
 		
+		<div class="note-title">HP GRATIS & LOMBA TO</div>
+		
+		<div class="box">
+		<span>untuk pemenang HP GRATIS di umumkan di awal bulan tanggal 2 ya bosku, pemenangnya nanti dipilih secara random atau acak, semoga bosku beruntung nantinya ya</span>
+            <button class="copy-btn" onclick="copyText(this, 'untuk pemenang HP GRATIS di umumkan di awal bulan tanggal 2 ya bosku, pemenangnya nanti dipilih secara random atau acak, semoga bosku beruntung nantinya ya')">COPY</button>
+        </div>
+		
+		<div class="box">
+		<span>untuk pemang lomba TURNOVER di umumkan di awal bulan tanggal 2 ya bosku, pemenangnya nanti dipilih berdasarkan pemain dengan turnover tertinggi dalam periode satu bulan</span>
+            <button class="copy-btn" onclick="copyText(this, 'untuk pemang lomba TURNOVER di umumkan di awal bulan tanggal 2 ya bosku, pemenangnya nanti dipilih berdasarkan pemain dengan turnover tertinggi dalam periode satu bulan')">COPY</button>
+        </div>
+		
     </div>
+	
 
     <!-- NOTE PAD 2 -->
     <div class="note-pad">
