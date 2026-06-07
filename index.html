@@ -5,6 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>NOTEPAD LIVECHATT</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700;800&display=swap" rel="stylesheet">
+
 <style>
 *{
     margin:0;
@@ -40,8 +43,8 @@ body::before{
     justify-content:center;
     align-items:center;
     gap:12px;
-
-    font-size:36px;
+	font-family:'Orbitron',sans-serif;
+    font-size:35px;
     font-weight:700;
 
     margin-bottom:25px;
@@ -131,7 +134,7 @@ body::before{
 }
 
 .note-title{
-     font-size:20px;
+     font-size:23px;
     font-weight:700;
 
     color:#1a1a1a; 
@@ -164,7 +167,7 @@ body::before{
     padding:12px 15px;
     margin-bottom:18px;
 
-    background: url("bg/gambar2.jpg") center/cover no-repeat;
+    background-color: #010101;
 
     border:1px solid rgba(255,255,255,0.15);
 
@@ -205,9 +208,9 @@ body::before{
     flex:1;
     color:white;
 
-    white-space:normal;       /* boleh turun baris */
-    word-break:break-word;    /* potong kata panjang */
-    overflow-wrap:break-word; /* aman untuk semua browser */
+    white-space:normal;       
+    word-break:break-word;    
+    overflow-wrap:break-word; 
 
     text-align:left;
 }
@@ -366,6 +369,104 @@ body::before{
     }
 }
 
+.menu-togel{
+    display:flex;
+    gap:10px;
+    margin-top:12px;
+}
+
+.menu-btn{
+    flex:1;
+    padding:12px;
+    border:none;
+    border-radius:12px;
+    cursor:pointer;
+
+    color:#fff;
+    font-weight:700;
+    font-size:19px;
+
+    background:linear-gradient(
+        135deg,
+        #0d47a1,
+        #1565c0
+    );
+
+    border:1px solid rgba(255,255,255,.15);
+
+    text-shadow:0 1px 2px rgba(0,0,0,.5);
+
+    box-shadow:
+        0 4px 12px rgba(13,71,161,.35);
+
+    transition:.25s;
+}
+
+.menu-btn:hover{
+    transform:translateY(-2px);
+
+    background:linear-gradient(
+        135deg,
+        #1565c0,
+        #1976d2
+    );
+
+    box-shadow:
+        0 6px 18px rgba(21,101,192,.45);
+}
+
+.menu-btn:last-child{
+    background:linear-gradient(135deg,#0d47a1,#1565c0);
+}
+
+.menu-togel{
+    display:flex;
+    gap:10px;
+    margin-top:15px;
+}
+
+
+.modal{
+    display:none;
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.75);
+    z-index:9999;
+    justify-content:center;
+    align-items:center;
+}
+
+.modal-content{
+    width:95%;
+    max-width:850px;
+    max-height:85vh;
+    background:#1a1a1a;
+    border-radius:20px;
+    padding:20px;
+    color:#fff;
+}
+
+.modal-content h2{
+    margin-bottom:15px;
+}
+
+.modal-scroll{
+    max-height:65vh;
+    overflow-y:auto;
+}
+
+.modal-scroll pre{
+    white-space:pre-wrap;
+    line-height:1.6;
+}
+
+.close{
+    float:right;
+    font-size:30px;
+    cursor:pointer;
+}
+
+
 </style>
 </head>
 <body>
@@ -382,18 +483,18 @@ body::before{
         <div class="note-title">BONUS MINGGUAN</div>
 
         <div class="box">
-            <span>Pembagian Bonus Kekalahan ( Cashback )  Slot hanya di berikan setiap hari JUMAT ya bosku</span>
-            <button class="copy-btn" onclick="copyText(this, 'Pembagian Bonus Kekalahan ( Cashback )  Slot hanya di berikan setiap hari JUMAT ya bosku')">COPY</button>
+            <span>pembagian Bonus Kekalahan ( Cashback )  Slot hanya di berikan setiap hari JUMAT ya bosku</span>
+            <button class="copy-btn" onclick="copyText(this, 'pembagian Bonus Kekalahan ( Cashback )  Slot hanya di berikan setiap hari JUMAT ya bosku')">COPY</button>
         </div>
 
         <div class="box">
-            <span>Pembagian Bonus Rollingan hanya di berikan setiap hari SENIN & akan di Kreditkan secara Otomatis ke akun bosku ya</span>
-            <button class="copy-btn" onclick="copyText(this, 'Pembagian Bonus Rollingan hanya di berikan setiap hari SENIN & akan di Kreditkan secara Otomatis ke akun bosku ya')">COPY</button>
+            <span>pembagian Bonus Rollingan hanya di berikan setiap hari SENIN & akan di Kreditkan secara otomatis ke akun bosku ya</span>
+            <button class="copy-btn" onclick="copyText(this, 'pembagian Bonus Rollingan hanya di berikan setiap hari SENIN & akan di Kreditkan secara otomatis ke akun bosku ya')">COPY</button>
         </div>
 
         <div class="box">
-            <span>ditunggu sesuai jadwal ya bosku, bonus akan masuk dan di Kreditkan secara Otomatis ke akun bosku nantinya sesuai jadwal</span>
-            <button class="copy-btn" onclick="copyText(this, 'ditunggu sesuai jadwal ya bosku, bonus akan masuk dan di Kreditkan secara Otomatis ke akun bosku nantinya sesuai jadwal')">COPY</button>
+            <span>ditunggu sesuai jadwal ya bosku, bonus akan masuk dan di Kreditkan secara otomatis ke akun bosku nantinya sesuai jadwal</span>
+            <button class="copy-btn" onclick="copyText(this, 'ditunggu sesuai jadwal ya bosku, bonus akan masuk dan di Kreditkan secara otomatis ke akun bosku nantinya sesuai jadwal')">COPY</button>
         </div>
 
         <div class="box">
@@ -431,10 +532,6 @@ body::before{
             <button class="copy-btn" onclick="copyText(this, 'silakan deposit dulu minimal 100 ribu langsung untuk bisa claim kaos dan tidak berlaku total akumulasi deposit ya bosku')">COPY</button>
         </div>
 
-		<div class="box">
-            <span>silakan lanjut konfirmasi dan claim di whatsapp ya bosku</span>
-            <button class="copy-btn" onclick="copyText(this, 'silakan lanjut konfirmasi dan claim di whatsapp ya bosku')">COPY</button>
-        </div>
 		
 		<div class="box">
 
@@ -528,16 +625,21 @@ Link Facebook: https://www.facebook.com/groups/minitotogroup2`)">
 
 </div>
 		
-		<div class="box">
-            <span>silakan lanjut konfirmasi dan claim di whatsapp ya bosku</span>
-            <button class="copy-btn" onclick="copyText(this, 'silakan lanjut konfirmasi dan claim di whatsapp ya bosku')">COPY</button>
-        </div>
-		
 		<div class="note-title">HP GRATIS & LOMBA TO</div>
 		
 		<div class="box">
-		<span>untuk pemenang HP GRATIS di umumkan di awal bulan tanggal 2 ya bosku, pemenangnya nanti dipilih secara random atau acak, semoga bosku beruntung nantinya ya</span>
-            <button class="copy-btn" onclick="copyText(this, 'untuk pemenang HP GRATIS di umumkan di awal bulan tanggal 2 ya bosku, pemenangnya nanti dipilih secara random atau acak, semoga bosku beruntung nantinya ya')">COPY</button>
+		<span>bosku cukup selalu aktif bermain di mini toto dan bosku akan berkesempatan menangkan hadiah handphone nya yg akan di umumkan di setiap bulan nya</span>
+            <button class="copy-btn" onclick="copyText(this, 'bosku cukup selalu aktif bermain di mini toto dan bosku akan berkesempatan menangkan hadiah handphone nya yg akan di umumkan di setiap bulan nya')">COPY</button>
+        </div>
+		
+		<div class="box">
+		<span>nantinya akan di umumkan secara acak pemenang nya di setiap awal bulan, bagi pemenang akan di kirim pesan khusus dari pesan memo untuk claim ke wa, semoga bosku beruntung bisa menjadi pemenang nya ya</span>
+            <button class="copy-btn" onclick="copyText(this, 'nantinya akan di umumkan secara acak pemenang nya di setiap awal bulan, bagi pemenang akan di kirim pesan khusus dari pesan memo untuk claim ke wa, semoga bosku beruntung bisa menjadi pemenang nya ya')">COPY</button>
+        </div>
+		
+		<div class="box">
+		<span>untuk pemenang HP GRATIS di umumkan di awal bulan tanggal 2 ya bosku</span>
+            <button class="copy-btn" onclick="copyText(this, 'untuk pemenang HP GRATIS di umumkan di awal bulan tanggal 2 ya bosku')">COPY</button>
         </div>
 		
 		<div class="box">
@@ -664,6 +766,17 @@ Link Facebook: https://www.facebook.com/groups/minitotogroup2`)">
             <button class="copy-btn" onclick="copyText(this, 'untuk pengajuan refund bosku bisa menghubungi layanan pelanggan DANA melalui telpon nomor 1500 445 atau kirim email ke help@dana.id')">COPY</button>
         </div>
 		
+		<div class="note-title">CONTOH POTO REKENING</div>
+		<div class="menu-togel">
+    <button type="button" class="menu-btn" onclick="openBankEwallet('bank')">
+        🏦 BANK
+    </button>
+
+    <button type="button" class="menu-btn" onclick="openBankEwallet('ewallet')">
+        💳 EWALLET
+    </button>
+</div>
+		
     </div>
 
     <!-- NOTE PAD 3 -->
@@ -675,14 +788,14 @@ Link Facebook: https://www.facebook.com/groups/minitotogroup2`)">
         </div>
 		
 		<div class="box">
-            <span>Buka aplikasi Google Chrome, tekan titik tiga (⋮) di sudut kanan atas layar  kemudian pilih histori dan cache lalu tekan tombol hapus data</span>
-            <button class="copy-btn" onclick="copyText(this, 'Buka aplikasi Google Chrome, tekan titik tiga (⋮) di sudut kanan atas layar  kemudian pilih histori dan cache lalu tekan tombol hapus data')">COPY</button>
+            <span>buka aplikasi Google Chrome, tekan titik tiga (⋮) di sudut kanan atas layar  kemudian pilih histori dan cache lalu tekan tombol hapus data</span>
+            <button class="copy-btn" onclick="copyText(this, 'buka aplikasi Google Chrome, tekan titik tiga (⋮) di sudut kanan atas layar  kemudian pilih histori dan cache lalu tekan tombol hapus data')">COPY</button>
         </div>
 		
 		<div class="note-title">KENDALA REKENING</div>
 		<div class="box">
-            <span>Nomor rekening yang anda Daftarkan disitus kami tidak valid bosku,bisa di bantu nomor rekening dan nama rekening yang benar bosku? </span>
-            <button class="copy-btn" onclick="copyText(this, 'Nomor rekening yang anda Daftarkan disitus kami tidak valid bosku,bisa di bantu nomor rekening dan nama rekening yang benar bosku?')">COPY</button>
+            <span>nomor rekening yang anda Daftarkan disitus kami tidak valid bosku,bisa di bantu nomor rekening dan nama rekening yang benar bosku? </span>
+            <button class="copy-btn" onclick="copyText(this, 'nomor rekening yang anda Daftarkan disitus kami tidak valid bosku,bisa di bantu nomor rekening dan nama rekening yang benar bosku?')">COPY</button>
         </div>
 		
 		<div class="box">
@@ -763,6 +876,32 @@ Link Facebook: https://www.facebook.com/groups/minitotogroup2`)">
             <button class="copy-btn" onclick="copyText(this, 'bosku bisa buat dulu rekening bank seperti seabank,neobank atau bank jago pakai ktp atas nama yang sama ya')">COPY</button>
         </div>
 		
+		<div class="note-title">WHATSAPP</div>
+		
+			<div class="box">
+            <span>🟢 WA HADIAH HP & TO</span>
+            <button class="copy-btn" onclick="copyText(this, 'silakan lanjut konfirmasi di whatsapp untuk pengambilan hadiahnya ya bosku https://wa.me/+6281937813893')">COPY</button>
+        </div>
+			
+			<div class="box">
+            <span>🟢 WA VERIF TOGEL</span>
+            <button class="copy-btn" onclick="copyText(this, 'silakan lanjut konfirmasi di whatsapp untuk melanjutkan proses wd-nya ya bosku https://wa.me/+6281957154445')">COPY</button>
+        </div>
+		
+			<div class="box">
+            <span>🟢 WA INVEST</span>
+            <button class="copy-btn" onclick="copyText(this, 'silakan lanjut konfirmasi di whatsapp untuk membuka akunnya kembali ya bosku https://wa.me/+6287744258298')">COPY</button>
+        </div>
+		
+			<div class="box">
+            <span>🟢 WA FREESPIN</span>
+            <button class="copy-btn" onclick="copyText(this, 'silakan lanjut konfirmasi di whatsapp untuk claim hadiah freespin ya bosku https://wa.me/+6287744258298')">COPY</button>
+        </div>
+		
+			<div class="box">
+            <span>🟢 WA BAJU</span>
+            <button class="copy-btn" onclick="copyText(this, 'silakan lanjut konfirmasi di whatsapp untuk pengisian form pengiriman bajunya ya bosku https://wa.me/+6287818614423')">COPY</button>
+        </div>
 		
 		<div class="note-title">TOGEL </div>
 		<div class="box">
@@ -784,7 +923,20 @@ Untuk batas line sebagai berikut:
     </button>
 
 </div>
+<div class="menu-togel">
+    <button type="button" class="menu-btn"
+onclick="openModal('jadwalModal')">
+    📅 JADWAL
+</button>
+
+    <button type="button" class="menu-btn hadiah-btn"
+onclick="openModal('hadiahModal')">
+    🎁 HADIAH
+</button>
 </div>
+
+</div>
+
 
     <!-- NOTE PAD 4 -->
     <div class="note-pad">
@@ -921,6 +1073,592 @@ function copyText(button, text){
 
 }
 </script>
+
+<script>
+function openModal(id){
+    document.getElementById(id).style.display = "flex";
+}
+
+function closeModal(id){
+    document.getElementById(id).style.display = "none";
+}
+
+window.onclick = function(e){
+    if(e.target.classList.contains("modal")){
+        e.target.style.display = "none";
+    }
+}
+</script>
+
+<script>
+function openBankEwallet(type){
+    const modal = document.getElementById("bankEwalletModal");
+    const list = document.getElementById("beList");
+    const title = document.getElementById("beTitle");
+
+    list.innerHTML = "";
+
+    if(type === "bank"){
+        title.innerText = "🏦 BANK";
+
+        const banks = [
+            {name:"SEABANK", icon:"https://img.icons8.com/color/48/bank-building.png"},
+            {name:"BANK JAGO", icon:"https://img.icons8.com/color/48/bank-building.png"},
+            {name:"NEOBANK", icon:"https://img.icons8.com/color/48/bank-building.png"},
+            {name:"SUPERBANK", icon:"https://img.icons8.com/color/48/bank-building.png"},
+            {name:"ALLOBANK", icon:"https://img.icons8.com/color/48/bank-building.png"}
+        ];
+
+        banks.forEach(b=>{
+            list.innerHTML += `
+                <div class="be-item">
+                    <img src="${b.icon}">
+                    <span>${b.name}</span>
+                </div>
+            `;
+        });
+    }
+
+    if(type === "ewallet"){
+        title.innerText = "💳 EWALLET";
+
+        const wallets = [
+            {name:"DANA", icon:"https://img.icons8.com/color/48/dana.png"},
+            {name:"OVO", icon:"https://img.icons8.com/color/48/ovo.png"},
+            {name:"LINKAJA", icon:"https://img.icons8.com/color/48/linkedin.png"},
+            {name:"GOPAY", icon:"https://img.icons8.com/color/48/gopay.png"},
+            {name:"SHOPEEPAY", icon:"https://img.icons8.com/color/48/shopee.png"}
+        ];
+
+        wallets.forEach(w=>{
+            list.innerHTML += `
+                <div class="be-item">
+                    <img src="${w.icon}">
+                    <span>${w.name}</span>
+                </div>
+            `;
+        });
+    }
+
+    modal.style.display = "flex";
+}
+</script>
+
+<!-- POPUP JADWAL -->
+<div id="jadwalModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('jadwalModal')">&times;</span>
+
+        <h2>📅 JADWAL TOGEL</h2>
+		<br>
+        <div class="modal-scroll">
+            <pre>
+📢 KENTUCKY MIDDAY ( SETIAP HARI )
+Tutup Pasaran : 00:01 WIB
+Result : 00:20 WIB
+www.kylottery.com
+
+📢 INDIANA MIDDAY ( SETIAP HARI )
+Tutup Pasaran : 00:10 WIB
+Result : 00:20 WIB
+www.hoosierlottery.com
+
+📢 TENNESSE MIDDAY ( SENIN OFF )
+Tutup Pasaran : 00:10 WIB
+Result : 00:20 WIB
+www.tnlottery.com
+
+📢 TEXAS DAY ( SENIN OFF )
+Tutup Pasaran : 00:20 WIB
+Result : 00:27 WIB
+www.texaslottery.com
+
+📢 FLORIDA MIDDAY ( SETIAP HARI )
+Tutup Pasaran : 00:20 WIB
+Result : 00:30 WIB
+www.flalottery.com
+
+📢 PENNSYLVANIA DAY ( SETIAP HARI )
+Tutup Pasaran : 00:15 WIB
+Result : 00:35 WIB
+www.palottery.state.pa.us
+
+📢 RHODE ISLAND ( SETIAP HARI )
+Tutup Pasaran : 00:20 WIB
+Result : 00:30 WIB
+www.rilot.com
+
+📢 ILLINOIS MIDDAY ( SETIAP HARI )
+Tutup Pasaran : 00:30 WIB
+Result : 00:40 WIB
+www.illinoislottery.com
+
+📢 MISSOURI MIDDAY ( SETIAP HARI )
+Tutup Pasaran : 00:35 WIB
+Result : 00:45 WIB
+www.molottery.com
+
+📢 WASHINGTON DC MIDDAY ( SETIAP HARI )
+Tutup Pasaran : 00:45 WIB
+Result : 00:55 WIB
+www.dclottery.com
+
+📢 DELAWARE DAY
+Tutup Pasaran : 00:45 WIB
+Result : 00:58 WIB
+www.delottery.com
+
+📢 VIRGINIA DAY ( SETIAP HARI )
+Tutup Pasaran : 00:45 WIB
+Result : 01:00 WIB
+www.valottery.com
+
+📢 NEW YORK MIDDAY ( SETIAP HARI )
+Tutup Pasaran : 01:15 WIB
+Result : 01:30 WIB
+www.nylottery.ny.gov
+
+📢 WISCONSIN (SETIAP HARI)
+Tutup Pasaran : 01:19 WIB
+Result : 01:29 WIB
+https://www.youtube.com/watch?v=IJFrE_pGQRM
+
+📢 FREETOWN ( Setiap Hari )
+JAM TUTUP : 02:10 WIB
+JAM RESULT : 02:30 WIB
+https://freetownpools.town/
+
+📢 CAROLINA DAY ( SETIAP HARI )
+Tutup Pasaran : 02:45 WIB
+Result : 03:00 WIB
+https://nclottery.com/Pick4
+
+📢 OREGON 1 ( SETIAP HARI )
+Tutup Pasaran : 02:45 WIB
+Result : 03:00 WIB
+www.oregonlottery.org
+
+📢 GERMANY POOLS ( SETIAP HARI )
+Tutup Pasaran : 04:15 WIB
+Result : 04:30 WIB
+www.germanypools.com
+
+📢 MOSKOW ( Setiap Hari )
+Tutup Pasaran : 04:40 WIB
+Result : 05:00 WIB
+https://moskowlotto.com/
+
+📢 PENNSYLVANIA EVENING ( SETIAP HARI )
+Tutup Pasaran : 05:45 WIB
+Result : 05:58 WIB
+www.palottery.state.pa.us
+
+📢 OREGON 2 ( SETIAP HARI )
+Tutup Pasaran : 05:45 WIB
+Result : 06:00 WIB
+www.oregonlottery.org
+
+📢 TEXAS EVENING ( SENIN OFF )
+Tutup Pasaran : 05:50 WIB
+Result : 06:00 WIB
+www.texaslottery.com
+
+📢 GEORGIA EVENING ( SETIAP HARI )
+Tutup Pasaran : 05:50 WIB
+Result : 06:00 WIB
+www.wsbtv.com
+
+📢 TENNESSE EVENNING ( SETIAP HARI )
+Tutup Pasaran : 06:10 WIB
+Result : 06:20 WIB
+www.tnlottery.com
+
+📢 MICHIGAN EVENING ( SETIAP HARI )
+Tutup Pasaran : 06:20 WIB
+Result : 06:29 WIB
+www.michiganlottery.com
+
+📢 OHIO EVENING ( SETIAP HARI )
+Tutup Pasaran : 06:20 WIB
+Result : 06:29 WIB
+https://www.youtube.com/user/OHdailydraws/videos
+
+📢 KINGSTON ( Setiap Hari )
+JAM TUTUP : 06:20 WIB
+JAM RESULT : 06:50 WIB
+Link : https://kingstonlotteries.com
+
+📢 MARYLAND EVENING ( SETIAP HARI )
+Tutup Pasaran : 06:45 WIB
+Result : 06:55 WIB
+www.mdlottery.com
+
+📢 WASHINGTON DC EVENING ( SETIAP HARI )
+Tutup Pasaran : 06:45 WIB
+Result : 06:57 WIB
+www.dclottery.com
+
+📢 DELAWARE NIGHT ( SETIAP HARI )
+Tutup Pasaran : 06:45 WIB
+Result : 06:57 WIB
+www.delottery.com
+
+📢 ATLANTA POOLS ( SETIAP HARI )
+Tutup Pasaran : 06:30 WIB
+Result : 07:00 WIB
+www.atlantapools.us
+
+📢 CALIFORNIA ( SETIAP HARI )
+Tutup Pasaran : 08:20 WIB
+Result : 08:30 WIB
+www.calottery.com/draw-games/daily-4
+
+📢 FLORIDA EVENING ( SETIAP HARI )
+Tutup Pasaran : 08:35 WIB
+Result : 08:45 WIB
+www.flalottery.com
+
+📢 MISSOURI EVENING ( SETIAP HARI )
+Tutup Pasaran : 08:45 WIB
+Result : 08:59 WIB
+www.molottery.com
+
+📢 OREGON 3 ( SETIAP HARI )
+Tutup Pasaran : 08:50 WIB
+Result : 09:00 WIB
+www.oregonlottery.org
+
+📢 ILLINOIS EVENING ( SETIAP HARI )
+Tutup Pasaran : 09:10 WIB
+Result : 09:22 WIB
+www.illinoislottery.com
+
+📢 NEW YORK EVENING ( SETIAP HARI )
+Tutup Pasaran : 09:15 WIB
+Result : 09:30 WIB
+www.nylottery.ny.gov
+
+📢 INDIANA EVENING ( SETIAP HARI )
+Tutup Pasaran : 09:40 WIB
+Result : 09:50 WIB
+www.hoosierlottery.com
+
+📢 NEW JERSEY EVENING ( SETIAP HARI )
+Tutup Pasaran : 09:45 WIB
+Result : 09:56 WIB
+www.njlottery.com
+
+📢 VIRGINIA NIGHT ( SETIAP HARI )
+Tutup Pasaran : 09:45 WIB
+Result : 10:00 WIB
+www.valottery.com
+
+📢 KENTUCKY EVENING ( SETIAP HARI )
+Tutup Pasaran : 09:45 WIB
+Result : 10:00 WIB
+www.kylottery.com
+
+📢 TEXAS NIGHT ( SENIN OFF )
+Tutup Pasaran : 10:00 WIB
+Result : 10:12 WIB
+www.texaslottery.com
+
+📢 NORTH CAROLINA EVENING
+Tutup Pasaran :10.10 WIB
+Result :10:20 WIB
+www.clottery.com/Pick4
+
+📢 GEORGIA NIGHT ( SETIAP HARI )
+Tutup Pasaran : 10:25 WIB
+Result : 10:34 WIB
+www.wsbtv.com
+
+📢 CAMBODIA ( SETIAP HARI )
+Tutup Pasaran : 11:30 WIB
+Result : 11:50 WIB
+www.magnumcambodia.com
+
+📢 OREGON 4 ( SETIAP HARI )
+Tutup Pasaran : 11:50 WIB
+Result : 12:00 WIB
+www.oregonlottery.org
+
+📢 BULLSEYE ( SETIAP HARI )
+Tutup Pasaran : 11:50 WIB
+Result : 12:10 WIB
+www.mylotto.co.nz/results/bullseye
+
+📢 LIMAPOOLS ( Setiap Hari )
+JAM TUTUP : 12:15 WIB
+JAM RESULT : 12:45 WIB
+Link : https://limapools.com/
+
+📢 TOTOMACAU ( SETIAP HARI 6X SEHARI )
+Tutup Pasaran : 13:00 WIB ( 15 MENIT SETELAH TUTUP RESULT )
+Tutup Pasaran : 16:00 WIB ( 15 MENIT SETELAH TUTUP RESULT )
+Tutup Pasaran : 19:00 WIB ( 15 MENIT SETELAH TUTUP RESULT )
+Tutup Pasaran : 22:00 WIB ( 15 MENIT SETELAH TUTUP RESULT )
+Tutup Pasaran : 23:00 WIB ( 15 MENIT SETELAH TUTUP RESULT )
+Tutup Pasaran : 00:01 WIB ( 15 MENIT SETELAH TUTUP RESULT )
+https://kick.com/live-ttm4d
+
+📢 TOTOMACAU 5D ( SETIAP HARI 2X SEHARI )
+Tutup Pasaran : 15:15 WIB ( 15 MENIT SETELAH TUTUP RESULT )
+Tutup Pasaran : 21:15 WIB ( 15 MENIT SETELAH TUTUP RESULT )
+https://kick.com/studio-live-game
+
+📢 SYDNEY LOTTO ( SETIAP HARI )
+Tutup Pasaran : 13:49 WIB
+Result : 14:00 WIB
+https://sydneylotto.today/
+Youtube Chanel : https://www.youtube.com/@SYDNEYLOTTOOFFICIAL1
+
+📢 NORTH KOREA ( SETIAP HARI )
+Tutup Pasaran : 14:45 WIB
+Result : 15:15 WIB
+northkoreapools.com
+
+📢 CHINA ( SETIAP HARI )
+Tutup Pasaran : 15:10 WIB
+Result : 15:30 WIB
+www.chinapools.asia
+
+📢 THAILAND ( SETIAP HARI )
+Tutup Pasaran : 16:35 WIB
+Result : 17:05 WIB
+www.thailandpools.asia
+
+📢 KING KONG POOLS ( SETIAP HARI 2X SEHARI )
+Tutup Pasaran : 16:59 WIB ( 1 MENIT SETELAH TUTUP RESULT )
+Tutup Pasaran : 23:29 WIB ( 1 MENIT SETELAH TUTUP RESULT )
+https://kingkongpools.id/
+
+📢 JEPANG / JAPAN ( SETIAP HARI )
+Tutup Pasaran : 16:50 WIB
+Result : 17:20 WIB
+www.japanpools.online
+
+📢 SINGAPORE POOLS ( SELASA & JUMAT OFFLINE )
+Tutup Pasaran : 17:15 WIB
+Result : 17:50 WIB
+www.singaporepools.com.sg
+
+📢 PHOENIX 4D ( SETIAP HARI )
+Tutup Pasaran : 18:30 WIB
+Result : 19:00 WIB
+www.livedrawphoenix.com
+
+📢 MONGOLIA ( SETIAP HARI )
+Tutup Pasaran : 19:00 WIB
+Result : 19:25 WIB
+www.Mongoliawinner.com
+
+📢 PORTLAND ( SETIAP HARI )
+Tutup Pasaran : 19:50 WIB
+Result : 20:20 WIB
+www.portlandpools.us
+
+📢 PCSO ( MINGGU OFFLINE )
+Tutup Pasaran : 19:45 WIB
+Result : 20:15 WIB
+www.pcso.gov.ph
+
+📢 TAIWAN ( SETIAP HARI )
+Tutup Pasaran : 20:30 WIB
+Result : 20:45 WIB
+www.taiwan-lotto.com
+
+📢 BUFFALO ( SETIAP HARI )
+Tutup Pasaran : 20:30 WIB
+Result : 21:00 WIB
+www.buffalo4d.com
+
+📢 TENNESSE MORNING ( MINGGU OFF )
+Tutup Pasaran : 21:10 WIB
+Result : 21:22 WIB
+www.tnlottery.com
+
+📢 BOGOTA LOTERY ( SETIAP HARI )
+Tutup Pasaran : 21:10 WIB
+Result : 21:40 WIB
+www.bogotaloteria.com
+
+📢 TEXAS MORNING ( MINGGU OFF )
+Tutup Pasaran : 21:50 WIB
+Result : 22:00 WIB
+www.texaslottery.com
+
+📢 OSLO POOLS ( Setiap Hari )
+Jam Tutup : 22:10 WIB
+Jam Result : 22:30 WIB
+Link Result : https://oslopools4d.com/
+
+📢 MUNCHEN LOTTERY ( Setiap Hari )
+Tutup Pasaran : 22:15 WIB
+Result : 22:45 WIB
+https://munchenlotteries.com/
+
+📢 HONGKONG LOTTO ( SETIAP HARI )
+Tutup Pasaran : 22:59 WIB
+Result : 23:00 WIB
+https://hongkonglotto.today/
+Youtube Chanel : https://www.youtube.com/@hngkonglotto/streams
+
+📢 JAKARTA POOLS ( SETIAP HARI )
+Tutup Pasaran : 23:30 WIB
+Result : 23:45 WIB
+https://kick.com/studio-live-game
+
+📢 BOSTON ( Setiap Hari )
+Tutup Pasaran : 23:20 WIB
+Result : 23:50 WIB
+https://bostonlotteries.com/
+
+📢 MARYLAND MIDDAY ( SETIAP HARI )
+Tutup Pasaran : 23:15 WIB
+Result : 23:28 WIB
+www.mdlottery.com
+
+📢 OHIO MIDDAY ( SETIAP HARI )
+Tutup Pasaran : 23:20 WIB
+Result : 23:29 WIB
+https://www.youtube.com/user/OHdailydraws/videos
+
+📢 GEORGIA MIDDAY ( SETIAP HARI )
+Tutup Pasaran : 23:20 WIB
+Result : 23:29 WIB
+www.wsbtv.com
+
+📢 MICHIGAN MIDDAY ( SETIAP HARI )
+Tutup Pasaran : 23:50 WIB
+Result : 23:59 WIB
+www.michiganlottery.com
+
+📢 NEW JERSEY MIDDAY ( SETIAP HARI )
+Tutup Pasaran : 23:50 WIB
+Result : 23:59 WIB
+www.njlottery.com
+            </pre>
+        </div>
+    </div>
+</div>
+
+<!-- POPUP HADIAH -->
+<div id="hadiahModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('hadiahModal')">&times;</span>
+
+        <h2>🎁 HADIAH TOGEL</h2>
+		<br>
+        <div class="modal-scroll">
+            <pre>
+📍 HADIAH BET FULL :
+ • 4D = x9.900
+ • 3D = x990
+ • 2D = x99
+
+📍 HADIAH BET PRIZE:
+Khusus untuk pasaran  CAMBODIA, SYDNEY, CHINA, JAPAN, SINGAPORE, TAIWAN, HONGKONG 4D(Rabu, Sabtu, Minggu)
+PRIZE 1
+ • 4D : 6.500x
+ • 3D : 650x
+ • 2D : 70x
+PRIZE 2
+ • 4D : 2.100x
+ • 3D : 210x
+ • 2D : 20x
+PRIZE 3
+ • 4D : 1.100x
+ • 3D : 110x
+ • 2D : 8x
+
+📍 HADIAH BB ( BOLAK BALIK ) :
+ • 4D ( TEPAT ) = x4.000 | 4D ( BB ) = x200
+ • 3D ( TEPAT )= x400 | 3D ( BB ) = x100
+ • 2D ( TEPAT )= x70 | 2d ( BB ) = x20
+
+📍 HADIAH DISKON : 
+ • 4D = x3.000
+ • 3D = x400
+ • 2D = x70
+(2D Depan = x65 | 2D Tengah = x65 )
+ • 50-50 = x1
+( Kenak Kei = -2.5% )
+ • COLOK BEBAS = x1.53
+(Colok Bebas (2D)= x7 | Colok Bebas (3D) = x10 | Colok Bebas (4D)= x18)
+ • KOMBINASI = x2.6
+ • COLOK JITU = x8
+ • COLOK NAGA
+(Colok Naga (3D) = x22 | Colok Naga (4D) = x35 | Macau Shio = x110)
+ • TEPI TENGAH = x1
+( Kenak Kei = -2.5% )
+ • SHIO = x9
+ • SILANG HOMO = x1
+( Kenak Kei = -2.5% )
+ • KEMBANG KEMPIS = x1
+( Kembang - Kempis kenak kei = -2.5% | Kembar Depan-Belakang-Tengah Dapat Kei = 40% )
+ • DASAR = x1
+( Ganjil Kenak Kei = -25% Besar Kenak Kei = -25% | Genap Dapat Kei = 10% Kecil Dapat Kei = 10% )
+
+
+HADIAH 5D TOTO MACAU MODE BET FULL :💥 
+💥 5D : X 88,000
+💥 4D : x 9,000
+💥 3D : x 950
+💥 2D : x 95
+💥 Colok Bebas : x0.9
+💥 Colok Bebas ( 2D )(2 nomor ): x4
+💥 Colok Bebas ( 2D )(3 nomor ): x6
+💥 Colok Bebas ( 2D )(4 nomor ): x20
+💥 Colok Bebas ( 2D )(5 nomor ): x200
+💥 Colok Bebas ( 4D )(4 nomor ): x50
+💥 Colok Bebas ( 4D )(5 nomor ): x200
+💥(Colok Naga (3D) = x9 | Colok Naga (4D) = x20
+💥 2 Kombinasi : x2.7 
+💥 Colok Jitu : x8
+💥TEPI TENGAH = x1
+( Kenak Kei = -2.2% )
+💥 SHIO = x10
+💥 DASAR =x1
+( Ganjil Kenak Kei = -25% Besar Kenak Kei = -25% | Genap Dapat Kei = 10% Kecil Dapat Kei = 10% )
+
+HADIAH 5D TOTO MACAU MODE BET DISKON :
+💥 5D : X 50.000
+💥 4D : X 7.000
+💥 3D : X 750
+💥 2D : X 75
+
+HADIAH MODE BET BOLAK BALIK (BB) :💥
+💥 5D ( TEPAT ) : X 50,000
+💥 5D ( BB )    : X 350
+💥 4D ( TEPAT ) : x5.000
+💥 4D ( BB)     : x180
+💥 3D ( TEPAT ) : x 500
+💥 3D ( BB)     : x 75
+💥 2D (TEPAT)   : x80
+💥 2D (BB)      : x15
+
+DISKON UNTUK BET DISKON ( HANYA BET DISKON BARU DAPAT DISKON) :
+💥 5D : 38%
+💥 4D : 20%
+💥 3D : 20% 
+💥 2D : 20%
+            </pre>
+        </div>
+    </div>
+</div>
+
+<!-- POPUP BANK & EWALLET -->
+<div id="bankEwalletModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('bankEwalletModal')">&times;</span>
+
+        <h2 id="beTitle">LIST</h2>
+
+        <div class="modal-scroll" id="beList">
+        </div>
+    </div>
+</div>
 
 </body>
 </html>
