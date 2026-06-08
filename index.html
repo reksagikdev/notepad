@@ -387,10 +387,10 @@ body::before{
     font-size:19px;
 
     background:linear-gradient(
-        135deg,
-        #0d47a1,
-        #1565c0
-    );
+    135deg,
+    #00897b,
+    #00acc1
+);
 
     border:1px solid rgba(255,255,255,.15);
 
@@ -406,23 +406,24 @@ body::before{
     transform:translateY(-2px);
 
     background:linear-gradient(
-        135deg,
-        #1565c0,
-        #1976d2
-    );
+    135deg,
+    #009688,
+    #26c6da
+);
 
     box-shadow:
         0 6px 18px rgba(21,101,192,.45);
 }
 
 .menu-btn:last-child{
-    background:linear-gradient(135deg,#0d47a1,#1565c0);
+    background:linear-gradient(135deg,#00897b,#00acc1);
 }
 
 .menu-togel{
     display:flex;
     gap:10px;
     margin-top:15px;
+	margin-bottom:20px;
 }
 
 
@@ -466,6 +467,47 @@ body::before{
     cursor:pointer;
 }
 
+.be-item{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    padding:12px;
+    margin-bottom:10px;
+    background:#2a2a2a;
+    border-radius:12px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.be-item:hover{
+    background:#3a3a3a;
+}
+
+.bank-preview{
+    text-align:center;
+}
+
+.bank-preview img{
+    width:100%;
+    max-width:450px;
+    border-radius:12px;
+    margin-top:15px;
+}
+
+.back-btn{
+    background:#1565c0;
+    color:#fff;
+    border:none;
+    padding:10px 18px;
+    border-radius:10px;
+    cursor:pointer;
+    font-weight:700;
+    margin-bottom:15px;
+}
+
+.back-btn:hover{
+    background:#1976d2;
+}
 
 </style>
 </head>
@@ -480,47 +522,70 @@ body::before{
 
     <!-- NOTE PAD 1 -->
     <div class="note-pad">
-        <div class="note-title">BONUS MINGGUAN</div>
+        <div class="note-title">BONUS CASHBACK</div>
 
         <div class="box">
-            <span>pembagian Bonus Kekalahan ( Cashback )  Slot hanya di berikan setiap hari JUMAT ya bosku</span>
-            <button class="copy-btn" onclick="copyText(this, 'pembagian Bonus Kekalahan ( Cashback )  Slot hanya di berikan setiap hari JUMAT ya bosku')">COPY</button>
+            <span>Pembagian Bonus Kekalahan ( Cashback )  SLOT hanya di berikan setiap hari Jum'at ya bosku</span>
+            <button class="copy-btn" onclick="copyText(this, 'pembagian Bonus Kekalahan ( Cashback )  SLOT hanya di berikan setiap hari Jum'at ya bosku')">COPY</button>
+        </div>
+		
+		<div class="box">
+            <span>Pembagian Bonus Kekalahan ( Cashback )  LIVE GAME hanya di berikan setiap hari Selasa ya bosku</span>
+            <button class="copy-btn" onclick="copyText(this, 'pembagian Bonus Kekalahan ( Cashback )  LIVE GAME hanya di berikan setiap hari Selasa ya bosku')">COPY</button>
+        </div>
+		
+		<div class="note-title">CEK BONUS CASHBACK</div>
+
+        <div class="box">
+            <span>Pada periode ( ) bosku terhitung menang dan tidak mendapatkan bonus cashback ya, cashback hanya diberikan kepada yang kalah minimal 50 ribu pada periode tersebut</span>
+            <button class="copy-btn" onclick="copyText(this, 'pada periode (  ) bosku terhitung menang dan tidak mendapatkan bonus cashback, cashback hanya diberikan kepada yang kalah minimal 50 ribu pada periode tersebut')">COPY</button>
+        </div>
+		
+		<div class="box">
+            <span>Untuk kekalahan bosku di minggu ini atau di luar periode tersebut, maka bonusnya akan masuk hitungan di jum'at depan ya</span>
+            <button class="copy-btn" onclick="copyText(this, 'untuk kekalahan bosku di minggu ini atau di luar periode tersebut, maka bonusnya akan masuk hitungan di jum'at depan ya')">COPY</button>
+        </div>
+		
+		<div class="box">
+            <span>Bonus dibagikan sesuai promo dan ketentuan yang berlaku ya bosku, jadi semuanya sesuai perhitungan dalam satu periode</span>
+            <button class="copy-btn" onclick="copyText(this, 'bonus dibagikan sesuai promo dan ketentuan yang berlaku ya bosku, jadi semuanya sesuai perhitungan dalam satu periode')">COPY</button>
+        </div>
+
+		<div class="note-title">BONUS ROLLINGAN</div>
+        <div class="box">
+            <span>Pembagian Bonus Rollingan hanya di berikan setiap hari Senin dan akan di Kreditkan secara otomatis ke akun bosku ya</span>
+            <button class="copy-btn" onclick="copyText(this, 'pembagian Bonus Rollingan hanya di berikan setiap hari Senin dan akan di Kreditkan secara otomatis ke akun bosku ya')">COPY</button>
         </div>
 
         <div class="box">
-            <span>pembagian Bonus Rollingan hanya di berikan setiap hari SENIN & akan di Kreditkan secara otomatis ke akun bosku ya</span>
-            <button class="copy-btn" onclick="copyText(this, 'pembagian Bonus Rollingan hanya di berikan setiap hari SENIN & akan di Kreditkan secara otomatis ke akun bosku ya')">COPY</button>
-        </div>
-
-        <div class="box">
-            <span>ditunggu sesuai jadwal ya bosku, bonus akan masuk dan di Kreditkan secara otomatis ke akun bosku nantinya sesuai jadwal</span>
+            <span>Ditunggu sesuai jadwal ya bosku, bonus akan masuk dan di Kreditkan secara otomatis ke akun bosku nantinya sesuai jadwal</span>
             <button class="copy-btn" onclick="copyText(this, 'ditunggu sesuai jadwal ya bosku, bonus akan masuk dan di Kreditkan secara otomatis ke akun bosku nantinya sesuai jadwal')">COPY</button>
         </div>
 
         <div class="box">
-            <span>dibagikan mulai jam 2 pagi ya bosku, nanti bonus akan masuk paling lama jam 6 pagi sudah masuk semua</span>
+            <span>Dibagikan mulai jam 2 pagi ya bosku, nanti bonus akan masuk paling lama jam 6 pagi sudah masuk semua</span>
             <button class="copy-btn" onclick="copyText(this, 'dibagikan mulai jam 3 pagi ya bosku, nanti bonus akan masuk paling lama jam 6 pagi sudah masuk semua')">COPY</button>
         </div>
 
 	<div class="note-title">BONUS DEPOSIT</div>
 
 		<div class="box">
-            <span>silakan deposit dulu minimal 50 ribu langsung baru bisa klaim bonusnya ya bosku</span>
+            <span>Silakan deposit dulu minimal 50 ribu langsung baru bisa klaim bonusnya ya bosku</span>
             <button class="copy-btn" onclick="copyText(this, 'silakan deposit dulu minimal 50 ribu langsung baru bisa klaim bonusnya ya bosku')">COPY</button>
         </div>
 		
 		<div class="box">
-            <span>minimal deposit 50 ribu langsung untuk bisa claim bonusnya dan tidak berlaku total akumulasi deposit ya bosku</span>
+            <span>Minimal deposit 50 ribu langsung untuk bisa claim bonusnya dan tidak berlaku total akumulasi deposit ya bosku</span>
             <button class="copy-btn" onclick="copyText(this, 'minimal deposit 50 ribu langsung untuk bisa claim bonusnya dan tidak berlaku total akumulasi deposit ya bosku')">COPY</button>
         </div>
 		
 		<div class="box">
-            <span>bonus di klaim sebelum saldo deposit dimainkan ya bos, kalau sudah dimainkan tidak dapat di klaim lagi ya bosku</span>
+            <span>Bonus di klaim sebelum saldo deposit dimainkan ya bos, kalau sudah dimainkan tidak dapat di klaim lagi ya bosku</span>
             <button class="copy-btn" onclick="copyText(this, 'bonus di klaim sebelum saldo deposit dimainkan ya bos, kalau sudah dimainkan tidak dapat di klaim lagi ya bosku')">COPY</button>
         </div>
 		
 		<div class="box">
-            <span>bonus diberikan sesuai ketentuan ya bosku, silakan deposit dulu dan bonusnya di claim sebelum saldo dimainkan ya</span>
+            <span>Bonus diberikan sesuai ketentuan ya bosku, silakan deposit dulu dan bonusnya di claim sebelum saldo dimainkan ya</span>
             <button class="copy-btn" onclick="copyText(this, 'bonus diberikan sesuai ketentuan ya bosku, silakan deposit dulu dan bonusnya di claim sebelum saldo dimainkan ya')">COPY</button>
         </div>
 		
@@ -528,55 +593,24 @@ body::before{
 	<div class="note-title">BAJU</div>
 
         <div class="box">
-            <span>silakan deposit dulu minimal 100 ribu langsung untuk bisa claim kaos dan tidak berlaku total akumulasi deposit ya bosku</span>
+            <span>Silakan deposit dulu minimal 100 ribu langsung untuk bisa claim kaos dan tidak berlaku total akumulasi deposit ya bosku</span>
             <button class="copy-btn" onclick="copyText(this, 'silakan deposit dulu minimal 100 ribu langsung untuk bisa claim kaos dan tidak berlaku total akumulasi deposit ya bosku')">COPY</button>
         </div>
 
-		
-		<div class="box">
-
-    <span style="white-space: pre-line;">Username:
-Nama: 
-Nomor HP: 
-Alamat: 
-RT/RW: 
-Kecamatan: 
-Kabupaten: 
-Provinsi: 
-Kode Pos: 
-Ukuran Baju: 
-
-Patokan:
-Link Sharelok:
-    </span>
-
-    <button class="copy-btn"
-    onclick="copyText(this, `Username: 
-Nama: 
-Nomor HP: 
-Alamat: 
-RT/RW: 
-Kecamatan: 
-Kabupaten: 
-Provinsi: 
-Kode Pos: 
-Ukuran Baju: 
-
-Patokan: 
-Link Sharelok: `)">
-    COPY
+		<div class="menu-togel">
+    <button type="button" class="menu-btn"
+            onclick="openModal('formBajuModal')">
+        👕 FORM BAJU
     </button>
-
 </div>
-		
 
         <div class="box">
-            <span>di salin saja formnya dan bosku tinggal isi alamat lengkapnya, sertakan patokan rumahnya misal rumah bosku dekat sekolah, rumah sakit, masjid atau bangunan lain yang mudah ditemukan</span>
+            <span>Di salin saja formnya dan bosku tinggal isi alamat lengkapnya, sertakan patokan rumahnya misal rumah bosku dekat sekolah, rumah sakit, masjid atau bangunan lain yang mudah ditemukan</span>
             <button class="copy-btn" onclick="copyText(this, 'di salin saja formnya dan bosku tinggal isi alamat lengkapnya, sertakan patokan rumahnya misal rumah bosku dekat sekolah, rumah sakit, masjid atau bangunan lain yang mudah ditemukan')">COPY</button>
         </div>
 		
 		<div class="box">
-            <span>dibantu kirim share lokasi supaya kurir mudah menemukan alamatnya ya bosku</span>
+            <span>Dibantu kirim share lokasi supaya kurir mudah menemukan alamatnya ya bosku</span>
             <button class="copy-btn" onclick="copyText(this, 'dibantu kirim share lokasi supaya kurir mudah menemukan alamatnya ya bosku')">COPY</button>
         </div>
 		
@@ -588,22 +622,22 @@ Link Sharelok: `)">
         </div>
 		
 		<div class="box">
-            <span>silakan deposit dulu minimal 50 ribu langsung di bulan ini baru bisa klaim bonusnya ya bosku, tidak berlaku total akumulasi deposit ya bosku</span>
+            <span>Silakan deposit dulu minimal 50 ribu langsung di bulan ini baru bisa klaim bonusnya ya bosku, tidak berlaku total akumulasi deposit ya bosku</span>
             <button class="copy-btn" onclick="copyText(this, 'silakan deposit dulu minimal 50 ribu langsung di bulan ini baru bisa klaim bonusnya ya bosku, tidak berlaku total akumulasi deposit ya bosku')">COPY</button>
         </div>
 		
 		<div class="box">
-            <span>silakan login dulu ke apknya bosku, kemudian screenshot full tampilannya dan kirim kesini ya</span>
+            <span>Silakan login dulu ke apknya bosku, kemudian screenshot full tampilannya dan kirim kesini ya</span>
             <button class="copy-btn" onclick="copyText(this, 'silakan login dulu ke apknya bosku, kemudian screenshot full tampilannya dan kirim kesini ya')">COPY</button>
         </div>
 		
 		<div class="box">
-            <span>dicekkan id bosku sudah pernah claim sebelumnya ya jadi tidak bisa lagi, satu id hanya bisa sekali claim saja ya bosku</span>
+            <span>Dicekkan id bosku sudah pernah claim sebelumnya ya jadi tidak bisa lagi, satu id hanya bisa sekali claim saja ya bosku</span>
             <button class="copy-btn" onclick="copyText(this, 'dicekkan id bosku sudah pernah claim sebelumnya ya jadi tidak bisa lagi, satu id hanya bisa sekali claim saja ya bosku')">COPY</button>
         </div>
 		
 		<div class="box">
-            <span>dicekkan ada kesaamaan IP dengan id lain, jadi bonusnya tidak bisa di claim lagi ya bosku</span>
+            <span>Dicekkan ada kesaamaan IP dengan id lain, jadi bonusnya tidak bisa di claim lagi ya bosku</span>
             <button class="copy-btn" onclick="copyText(this, 'dicekkan ada kesaamaan IP dengan id lain, jadi bonusnya tidak bisa di claim lagi ya bosku')">COPY</button>
         </div>
 		
@@ -628,22 +662,22 @@ Link Facebook: https://www.facebook.com/groups/minitotogroup2`)">
 		<div class="note-title">HP GRATIS & LOMBA TO</div>
 		
 		<div class="box">
-		<span>bosku cukup selalu aktif bermain di mini toto dan bosku akan berkesempatan menangkan hadiah handphone nya yg akan di umumkan di setiap bulan nya</span>
+		<span>Bosku cukup selalu aktif bermain di mini toto dan bosku akan berkesempatan menangkan hadiah handphone nya yg akan di umumkan di setiap bulan nya</span>
             <button class="copy-btn" onclick="copyText(this, 'bosku cukup selalu aktif bermain di mini toto dan bosku akan berkesempatan menangkan hadiah handphone nya yg akan di umumkan di setiap bulan nya')">COPY</button>
         </div>
 		
 		<div class="box">
-		<span>nantinya akan di umumkan secara acak pemenang nya di setiap awal bulan, bagi pemenang akan di kirim pesan khusus dari pesan memo untuk claim ke wa, semoga bosku beruntung bisa menjadi pemenang nya ya</span>
+		<span>Nantinya akan di umumkan secara acak pemenang nya di setiap awal bulan, bagi pemenang akan di kirim pesan khusus dari pesan memo untuk claim ke wa, semoga bosku beruntung bisa menjadi pemenang nya ya</span>
             <button class="copy-btn" onclick="copyText(this, 'nantinya akan di umumkan secara acak pemenang nya di setiap awal bulan, bagi pemenang akan di kirim pesan khusus dari pesan memo untuk claim ke wa, semoga bosku beruntung bisa menjadi pemenang nya ya')">COPY</button>
         </div>
 		
 		<div class="box">
-		<span>untuk pemenang HP GRATIS di umumkan di awal bulan tanggal 2 ya bosku</span>
+		<span>Untuk pemenang HP GRATIS di umumkan di awal bulan tanggal 2 ya bosku</span>
             <button class="copy-btn" onclick="copyText(this, 'untuk pemenang HP GRATIS di umumkan di awal bulan tanggal 2 ya bosku')">COPY</button>
         </div>
 		
 		<div class="box">
-		<span>untuk pemang lomba TURNOVER di umumkan di awal bulan tanggal 2 ya bosku, pemenangnya nanti dipilih berdasarkan pemain dengan turnover tertinggi dalam periode satu bulan</span>
+		<span>Untuk pemang lomba TURNOVER di umumkan di awal bulan tanggal 2 ya bosku, pemenangnya nanti dipilih berdasarkan pemain dengan turnover tertinggi dalam periode satu bulan</span>
             <button class="copy-btn" onclick="copyText(this, 'untuk pemang lomba TURNOVER di umumkan di awal bulan tanggal 2 ya bosku, pemenangnya nanti dipilih berdasarkan pemain dengan turnover tertinggi dalam periode satu bulan')">COPY</button>
         </div>
 		
@@ -655,32 +689,32 @@ Link Facebook: https://www.facebook.com/groups/minitotogroup2`)">
         <div class="note-title">GANGGUAN QRIS</div>
 
         <div class="box">
-            <span>saat ini QRIS sedikit delay ya bosku,mohon ditunggu ya bosku nanti saldo akan masuk otomatis</span>
+            <span>Saat ini QRIS sedikit delay ya bosku,mohon ditunggu ya bosku nanti saldo akan masuk otomatis</span>
             <button class="copy-btn" onclick="copyText(this, 'saat ini QRIS sedikit delay ya bosku,mohon ditunggu ya bosku nanti saldo akan masuk otomatis')">COPY</button>
         </div>
 		
 		<div class="box">
-            <span>saat ini QRIS sedang gangguan ya bosku, sementara bosku bisa deposit ke bank BCA dulu</span>
+            <span>Saat ini QRIS sedang gangguan ya bosku, sementara bosku bisa deposit ke bank BCA dulu</span>
             <button class="copy-btn" onclick="copyText(this, 'saat ini QRIS sedang gangguan ya bosku, untuk sementara bosku bisa deposit ke bank BCA dulu ya')">COPY</button>
         </div>
 		
 		<div class="box">
-            <span>deposit anda masih dalam proses team vendor ya bosku, ditunggu ya bosku</span>
+            <span>Deposit anda masih dalam proses team vendor ya bosku, ditunggu ya bosku</span>
             <button class="copy-btn" onclick="copyText(this, 'deposit anda masih dalam proses team vendor ya bosku, ditunggu ya bosku')">COPY</button>
         </div>
 		
 		<div class="box">
-            <span>dibuka detail transaksinya bosku kemudian potokan bukti detail berhasil transfer yang ada kode RRN QRIS nya bosku</span>
+            <span>Dibuka detail transaksinya bosku kemudian potokan bukti detail berhasil transfer yang ada kode RRN QRIS nya bosku</span>
             <button class="copy-btn" onclick="copyText(this, 'dibuka detail transaksinya bosku kemudian potokan bukti detail berhasil transfer yang ada kode RRN QRIS nya bosku')">COPY</button>
         </div>
 
         <div class="box">
-            <span>mohon bersabar menunggu bosku apabila sudah ada dana masuk ke QRIS kami, saldo akan masuk ke akun bosku nanti ya</span>
+            <span>Mohon bersabar menunggu bosku apabila sudah ada dana masuk ke QRIS kami, saldo akan masuk ke akun bosku nanti ya</span>
             <button class="copy-btn" onclick="copyText(this, 'mohon bersabar menunggu bosku apabila sudah ada dana masuk ke QRIS kami, saldo akan masuk ke akun bosku nanti ya')">COPY</button>
         </div>
 
         <div class="box">
-            <span>estimasi waktu belum bisa kami pastikan ya bos jika sudah selesai dan saldo sukses masuk ke qris kami, maka akan diproseskan langsung ya bosku</span>
+            <span>Estimasi waktu belum bisa kami pastikan ya bos jika sudah selesai dan saldo sukses masuk ke qris kami, maka akan diproseskan langsung ya bosku</span>
             <button class="copy-btn" onclick="copyText(this, 'estimasi waktu belum bisa kami pastikan ya bos jika sudah selesai dan saldo sukses masuk ke qris kami, maka akan diproseskan langsung ya bosku')">COPY</button>
         </div>
 		
@@ -692,12 +726,12 @@ Link Facebook: https://www.facebook.com/groups/minitotogroup2`)">
 	
 		
 		<div class="box">
-            <span>untuk kendala tersebut saat ini masih dalam pengecekan lebih lanjut dari pusat ya bosku, ditunggu normal ya bosku</span>
+            <span>Untuk kendala tersebut saat ini masih dalam pengecekan lebih lanjut dari pusat ya bosku, ditunggu normal ya bosku</span>
             <button class="copy-btn" onclick="copyText(this, 'untuk kendala tersebut saat ini masih dalam pengecekan lebih lanjut dari pusat ya bosku, ditunggu normal ya bosku')">COPY</button>
         </div>
 		
 		<div class="box">
-            <span>estimasi belum dapat dipastikan ya bosku, secepatnya akan di usahakan mohon bersabar menunggu ya bosku</span>
+            <span>Estimasi belum dapat dipastikan ya bosku, secepatnya akan di usahakan mohon bersabar menunggu ya bosku</span>
             <button class="copy-btn" onclick="copyText(this, 'estimasi belum dapat dipastikan ya bosku, secepatnya akan di usahakan mohon bersabar menunggu ya bosku')">COPY</button>
         </div>
 		
@@ -705,68 +739,110 @@ Link Facebook: https://www.facebook.com/groups/minitotogroup2`)">
 		<div class="note-title">GANGGUAN WD</div>
 		
 		<div class="box">
-            <span>bosku WD sudah dikirimkan namun ada kendala dari bank yang menyebabkan pending, ditunggu dan dicek secara berkala ya bosku nanti pasti masuk</span>
+            <span>Bosku WD sudah dikirimkan namun ada kendala dari bank yang menyebabkan pending, ditunggu dan dicek secara berkala ya bosku nanti pasti masuk</span>
             <button class="copy-btn" onclick="copyText(this, 'bosku WD sudah dikirimkan namun ada kendala dari bank yang menyebabkan pending, ditunggu dan dicek secara berkala ya bosku nanti pasti masuk')">COPY</button>
         </div>
 		
 		<div class="box">
-            <span>saat ini bank bca sedang gangguan ya bosku, untuk wd ewallet kami proseskan wdnya pakai bank bca, ditunggu normal ya bosku kalau sudah normal pasti akan diproseskan</span>
+            <span>Saat ini bank bca sedang gangguan ya bosku, untuk wd ewallet kami proseskan wdnya pakai bank bca, ditunggu normal ya bosku kalau sudah normal pasti akan diproseskan</span>
             <button class="copy-btn" onclick="copyText(this, 'saat ini bank bca sedang gangguan ya bosku, untuk wd ewallet kami proseskan wdnya pakai bank bca, ditunggu normal ya bosku kalau sudah normal pasti akan diproseskan')">COPY</button>
         </div>
 		
 		<div class="box">
-            <span>saat ini sedang gangguan bankya bosku, ditunggu normal ya bosku</span>
+            <span>Saat ini sedang gangguan bankya bosku, ditunggu normal ya bosku</span>
             <button class="copy-btn" onclick="copyText(this, 'saat ini sedang gangguan bankya bosku, ditunggu normal ya bosku')">COPY</button>
         </div>
 		
 		<div class="box">
-            <span>berasabar menunggu ya bosku, jika sudah normal maka nanti akan langsung di proseskan ditunggu normal bosku</span>
+            <span>Berasabar menunggu ya bosku, jika sudah normal maka nanti akan langsung di proseskan ditunggu normal bosku</span>
             <button class="copy-btn" onclick="copyText(this, 'berasabar menunggu ya bosku, jika sudah normal maka nanti akan langsung di proseskan ditunggu normal bosku')">COPY</button>
         </div>
 		
 		<div class="box">
-            <span>untuk wd diluar bank BCA, BRI, BNI, MANDIRI dikenakan biaya ADM bank 6,500 karena wdnya kami proses antar bank ya bosku</span>
+            <span>Untuk wd diluar bank BCA, BRI, BNI, MANDIRI dikenakan biaya ADM bank 6,500 karena wdnya kami proses antar bank ya bosku</span>
             <button class="copy-btn" onclick="copyText(this, 'untuk wd diluar bank BCA, BRI, BNI, MANDIRI dikenakan biaya ADM bank 6,500 karena wdnya kami proses antar bank ya bosku')">COPY</button>
         </div>
 		
 		<div class="note-title">GANGGUAN DEPO</div>
 		
 		<div class="box">
-            <span>ma'af untuk deposit pulsa saat ini kita tidak tersedia ya bosku, bosku bisa deposit ke qris atau ke bank dulu ya</span>
+            <span>Ma'af untuk deposit pulsa saat ini kita tidak tersedia ya bosku, bosku bisa deposit ke qris atau ke bank dulu ya</span>
             <button class="copy-btn" onclick="copyText(this, 'ma'af untuk deposit pulsa saat ini kita tidak tersedia ya bosku, bosku bisa deposit ke qris atau ke bank dulu ya')">COPY</button>
         </div>
 		
 		<div class="box">
-            <span>id bosku kedapatan isi form deposit kosong, silakan deposit dulu yang benar untuk membuka akunnya kembali ya</span>
+            <span>Id bosku kedapatan isi form deposit kosong, silakan deposit dulu yang benar untuk membuka akunnya kembali ya</span>
             <button class="copy-btn" onclick="copyText(this, 'id bosku kedapatan isi form deposit kosong, silakan deposit dulu yang benar untuk membuka akunnya kembali ya')">COPY</button>
         </div>
 		
 		<div class="box">
-            <span>pastikan berhasil transfer dulu ya bosku, bosku bisa tunggu sampai berhasil statusnya maka nanti saldonya akan masuk</span>
+            <span>Pastikan berhasil transfer dulu ya bosku, bosku bisa tunggu sampai berhasil statusnya maka nanti saldonya akan masuk</span>
             <button class="copy-btn" onclick="copyText(this, 'pastikan berhasil transfer dulu ya bosku, bosku bisa tunggu sampai berhasil statusnya maka nanti saldonya akan masuk')">COPY</button>
         </div>
 		
 		<div class="box">
-            <span>kalau belum keluar bukti transfernya berarti masih pending bosku ditunggu saja bosku, kalau berhasil nanti saldo akan masuk otomatis ke akun bosku</span>
+            <span>Kalau belum keluar bukti transfernya berarti masih pending bosku ditunggu saja bosku, kalau berhasil nanti saldo akan masuk otomatis ke akun bosku</span>
             <button class="copy-btn" onclick="copyText(this, 'kalau belum keluar bukti transfernya berarti masih pending bosku ditunggu saja bosku, kalau berhasil nanti saldo akan masuk otomatis ke akun bosku')">COPY</button>
         </div>
 		
+		<div class="menu-togel">
+    <button type="button" class="menu-btn"
+            onclick="openBuktiTransfer()">
+        📄 CEK BUKTI TRANSFER
+    </button>
+</div>
+		
 		<div class="box">
-            <span>itu kendala gangguan dari banknya bosku, ditunggu saja sampai keluar bukti berhasil transfernya, biasanya kalau seperti itu nanti saldonya akan mental dan kembali ke rekening bosku</span>
+            <span>Itu kendala gangguan dari banknya bosku, ditunggu saja sampai keluar bukti berhasil transfernya, biasanya kalau seperti itu nanti saldonya akan mental dan kembali ke rekening bosku</span>
             <button class="copy-btn" onclick="copyText(this, 'itu kendala gangguan dari banknya bosku, ditunggu saja sampai keluar bukti berhasil transfernya, biasanya kalau seperti itu nanti saldonya akan mental dan kembali ke rekening bosku')">COPY</button>
         </div>
 		
 		<div class="box">
-            <span>kami cekkan transaksi dengan kode dan nama toko tersebut tidak ada masuk ke qris kami ya bosku, jadi bosku bisa ajukan refund saja terkait transaksi tersebut ke pihak dana ya</span>
+            <span>Kami cekkan transaksi dengan kode dan nama toko tersebut tidak ada masuk ke qris kami ya bosku, jadi bosku bisa ajukan refund saja terkait transaksi tersebut ke pihak dana ya</span>
             <button class="copy-btn" onclick="copyText(this, 'kami cekkan transaksi dengan kode dan nama toko tersebut tidak ada masuk ke qris kami ya bosku, jadi bosku bisa ajukan refund saja terkait transaksi tersebut ke pihak dana ya')">COPY</button>
         </div>
 	
 		<div class="box">
-            <span>untuk pengajuan refund bosku bisa menghubungi layanan pelanggan DANA melalui telpon nomor 1500 445 atau kirim email ke help@dana.id</span>
+            <span>Untuk pengajuan refund bosku bisa menghubungi layanan pelanggan DANA melalui telpon nomor 1500 445 atau kirim email ke help@dana.id</span>
             <button class="copy-btn" onclick="copyText(this, 'untuk pengajuan refund bosku bisa menghubungi layanan pelanggan DANA melalui telpon nomor 1500 445 atau kirim email ke help@dana.id')">COPY</button>
+        </div>	
+		
+    </div>
+
+    <!-- NOTE PAD 3 -->
+    <div class="note-pad">
+        <div class="note-title">KENDALA UMUM</div>
+		<div class="box">
+            <span>Coba hapus history dan data cache browsernya terlebih dahulu supaya lancar bosku, kemudian coba login ulang pakai link ini ya https://gesya.me/mnttutama</span>
+            <button class="copy-btn" onclick="copyText(this, 'coba hapus history dan data cache browsernya terlebih dahulu supaya lancar bosku, kemudian coba login ulang pakai link ini ya https://gesya.me/mnttutama')">COPY</button>
         </div>
 		
-		<div class="note-title">CONTOH POTO REKENING</div>
+		<div class="box">
+            <span>Buka aplikasi Google Chrome, tekan titik tiga (⋮) di sudut kanan atas layar  kemudian pilih histori dan cache lalu tekan tombol hapus data</span>
+            <button class="copy-btn" onclick="copyText(this, 'buka aplikasi Google Chrome, tekan titik tiga (⋮) di sudut kanan atas layar  kemudian pilih histori dan cache lalu tekan tombol hapus data')">COPY</button>
+        </div>
+		
+		<div class="note-title">KENDALA REKENING</div>
+		<div class="box">
+            <span>Nomor rekening yang anda daftarkan disitus kami tidak valid bosku,bisa di bantu nomor rekening dan nama rekening yang benar bosku? </span>
+            <button class="copy-btn" onclick="copyText(this, 'nomor rekening yang anda daftarkan disitus kami tidak valid bosku,bisa di bantu nomor rekening dan nama rekening yang benar bosku?')">COPY</button>
+        </div>
+		
+		<div class="box">
+            <span>Dicekkan rekeningnya sudah terdaftar di id lain ya bosku, berikan rekening bank lain yang belum pernah bos daftarkan biar bisa di perbaiki </span>
+            <button class="copy-btn" onclick="copyText(this, 'dicekkan rekeningnya sudah terdaftar di id lain ya bosku, berikan rekening bank lain yang belum pernah bos daftarkan biar bisa di perbaiki')">COPY</button>
+        </div>
+		
+		<div class="box">
+            <span>Dibantu potokan akun dananya bosku, fotokan bagian yang ada kelihatan nama dan nomor rekeningnya bosku</span>
+            <button class="copy-btn" onclick="copyText(this, 'dibantu potokan akun dananya bosku, fotokan bagian yang ada kelihatan nama dan nomor rekeningnya bosku')">COPY</button>
+        </div>
+		
+		<div class="box">
+            <span>Dibantu potokan rekeningnya bosku, fotokan bagian yang ada kelihatan nama dan nomor rekeningnya bosku</span>
+            <button class="copy-btn" onclick="copyText(this, 'dibantu potokan rekeningnya bosku, fotokan bagian yang ada kelihatan nama dan nomor rekeningnya bosku')">COPY</button>
+        </div>
+		
 		<div class="menu-togel">
     <button type="button" class="menu-btn" onclick="openBankEwallet('bank')">
         🏦 BANK
@@ -777,84 +853,48 @@ Link Facebook: https://www.facebook.com/groups/minitotogroup2`)">
     </button>
 </div>
 		
-    </div>
-
-    <!-- NOTE PAD 3 -->
-    <div class="note-pad">
-        <div class="note-title">KENDALA UMUM</div>
 		<div class="box">
-            <span>coba hapus history dan data cache browsernya terlebih dahulu supaya lancar bosku, kemudian coba login ulang pakai link ini ya https://gesya.me/mnttutama</span>
-            <button class="copy-btn" onclick="copyText(this, 'coba hapus history dan data cache browsernya terlebih dahulu supaya lancar bosku, kemudian coba login ulang pakai link ini ya https://gesya.me/mnttutama')">COPY</button>
-        </div>
-		
-		<div class="box">
-            <span>buka aplikasi Google Chrome, tekan titik tiga (⋮) di sudut kanan atas layar  kemudian pilih histori dan cache lalu tekan tombol hapus data</span>
-            <button class="copy-btn" onclick="copyText(this, 'buka aplikasi Google Chrome, tekan titik tiga (⋮) di sudut kanan atas layar  kemudian pilih histori dan cache lalu tekan tombol hapus data')">COPY</button>
-        </div>
-		
-		<div class="note-title">KENDALA REKENING</div>
-		<div class="box">
-            <span>nomor rekening yang anda Daftarkan disitus kami tidak valid bosku,bisa di bantu nomor rekening dan nama rekening yang benar bosku? </span>
-            <button class="copy-btn" onclick="copyText(this, 'nomor rekening yang anda Daftarkan disitus kami tidak valid bosku,bisa di bantu nomor rekening dan nama rekening yang benar bosku?')">COPY</button>
-        </div>
-		
-		<div class="box">
-            <span>dicekkan rekeningnya sudah terdaftar di id lain ya bosku, berikan rekening bank lain yang belum pernah bos daftarkan biar bisa di perbaiki </span>
-            <button class="copy-btn" onclick="copyText(this, 'dicekkan rekeningnya sudah terdaftar di id lain ya bosku, berikan rekening bank lain yang belum pernah bos daftarkan biar bisa di perbaiki')">COPY</button>
-        </div>
-		
-		<div class="box">
-            <span>dibantu potokan akun dananya bosku, fotokan bagian yang ada kelihatan nama dan nomor rekeningnya bosku</span>
-            <button class="copy-btn" onclick="copyText(this, 'dibantu potokan akun dananya bosku, fotokan bagian yang ada kelihatan nama dan nomor rekeningnya bosku')">COPY</button>
-        </div>
-		
-		<div class="box">
-            <span>dibantu potokan rekeningnya bosku, fotokan bagian yang ada kelihatan nama dan nomor rekeningnya bosku</span>
-            <button class="copy-btn" onclick="copyText(this, 'dibantu potokan rekeningnya bosku, fotokan bagian yang ada kelihatan nama dan nomor rekeningnya bosku')">COPY</button>
-        </div>
-		
-		
-		<div class="box">
-            <span>silakan login kembali dan isi ulang form withdrawnya bosku</span>
+            <span>Silakan login kembali dan isi ulang form withdrawnya bosku</span>
             <button class="copy-btn" onclick="copyText(this, 'silakan login kembali dan isi ulang form withdrawnya bosku')">COPY</button>
         </div>
+		
 		
 		<div class="note-title">GANTI REKENING</div>
 
         <div class="box">
-            <span>ada kendala apa dengan rekening bosku  yang terdaftar ya?</span>
+            <span>Ada kendala apa dengan rekening bosku  yang terdaftar ya?</span>
             <button class="copy-btn" onclick="copyText(this, 'ada kendala apa dengan rekening bosku  yang terdaftar ya?')">COPY</button>
         </div>
 
         <div class="box">
-            <span>pergantian rekening wajib atas nama pemilik yang sama ya bosku, dibantu nama dan nomor yang lama dan rekening penggantinya bosku</span>
+            <span>Pergantian rekening wajib atas nama pemilik yang sama ya bosku, dibantu nama dan nomor yang lama dan rekening penggantinya bosku</span>
             <button class="copy-btn" onclick="copyText(this, 'pergantian rekening wajib atas nama pemilik yang sama ya bosku, dibantu nama dan nomor yang lama dan rekening penggantinya bosku')">COPY</button>
         </div>
 
 		<div class="box">
-            <span>untuk pergantian rekening bank hanya bisa diganti ke sesama bank ya bosku, tidak bisa ke ewallet</span>
+            <span>Untuk pergantian rekening bank hanya bisa diganti ke sesama bank ya bosku, tidak bisa ke ewallet</span>
             <button class="copy-btn" onclick="copyText(this, 'untuk pergantian rekening bank hanya bisa diganti ke sesama bank ya bosku, tidak bisa ke ewallet')">COPY</button>
         </div>
 
         <div class="box">
-            <span>untuk verifikasi pergantian rekeningnya dibantu potokan KTP nya bosku</span>
+            <span>Untuk verifikasi pergantian rekeningnya dibantu potokan KTP nya bosku</span>
             <button class="copy-btn" onclick="copyText(this, 'untuk verifikasi pergantian rekeningnya dibantu potokan KTP nya bosku')">COPY</button>
         </div>
 
 		<div class="note-title">BELUM PREMIUM</div>
 
         <div class="box">
-            <span>rekening bosku belum premium ya, silakan di premiumkan dulu supaya wd nya bisa di proseskan bosku</span>
+            <span>Rekening bosku belum premium ya, silakan di premiumkan dulu supaya wd nya bisa di proseskan bosku</span>
             <button class="copy-btn" onclick="copyText(this, 'rekening bosku belum premium ya, silakan di premiumkan dulu supaya wd nya bisa di proseskan bosku')">COPY</button>
         </div>
 
         <div class="box">
-            <span>silakan di premiumkan dulu ya bosku, nanti setelah premium akunnya bisa login kembali dan wdnya bisa di proseskan juga</span>
+            <span>Silakan di premiumkan dulu ya bosku, nanti setelah premium akunnya bisa login kembali dan wdnya bisa di proseskan juga</span>
             <button class="copy-btn" onclick="copyText(this, 'silakan di premiumkan dulu ya bosku, nanti setelah premium akunnya bisa login kembali dan wdnya bisa di proseskan juga')">COPY</button>
         </div>
 		
 		<div class="box">
-            <span>kalau bosku belum ada ktp, bosku bisa premiumkan pakai ktp keluarga/kerabat bosku, silakan di premiumkan dulu</span>
+            <span>Kalau bosku belum ada ktp, bosku bisa premiumkan pakai ktp keluarga/kerabat bosku, silakan di premiumkan dulu</span>
             <button class="copy-btn" onclick="copyText(this, 'kalau bosku belum ada ktp, bosku bisa premiumkan pakai ktp keluarga/kerabat bosku, silakan di premiumkan dulu')">COPY</button>
         </div>
 		
@@ -862,17 +902,17 @@ Link Facebook: https://www.facebook.com/groups/minitotogroup2`)">
 		<div class="note-title">DANA LIMIT</div>
 		
 		<div class="box">
-            <span>rekening bosku limit ya, solusinya ganti rekening supaya wdnya bisa di proseskan</span>
+            <span>Rekening bosku limit ya, solusinya ganti rekening supaya wdnya bisa di proseskan</span>
             <button class="copy-btn" onclick="copyText(this, 'rekening bosku limit ya, solusinya ganti rekening supaya wdnya bisa di proseskan')">COPY</button>
         </div>
 		
 		<div class="box">
-            <span>berikan rekening bank lain dengan  nama pemilik yang sama supaya bisa diperbaiki rekeningnya dan wd bosku bisa di proseskan</span>
+            <span>Berikan rekening bank lain dengan  nama pemilik yang sama supaya bisa diperbaiki rekeningnya dan wd bosku bisa di proseskan</span>
             <button class="copy-btn" onclick="copyText(this, 'berikan rekening bank lain dengan  nama pemilik yang sama supaya bisa diperbaiki rekeningnya dan wd bosku bisa di proseskan')">COPY</button>
         </div>
 		
 		<div class="box">
-            <span>bosku bisa buat dulu rekening bank seperti seabank,neobank atau bank jago pakai ktp atas nama yang sama ya</span>
+            <span>Bosku bisa buat dulu rekening bank seperti seabank,neobank atau bank jago pakai ktp atas nama yang sama ya</span>
             <button class="copy-btn" onclick="copyText(this, 'bosku bisa buat dulu rekening bank seperti seabank,neobank atau bank jago pakai ktp atas nama yang sama ya')">COPY</button>
         </div>
 		
@@ -890,7 +930,7 @@ Link Facebook: https://www.facebook.com/groups/minitotogroup2`)">
 		
 			<div class="box">
             <span>🟢 WA INVEST</span>
-            <button class="copy-btn" onclick="copyText(this, 'silakan lanjut konfirmasi di whatsapp untuk membuka akunnya kembali ya bosku https://wa.me/+6283164762572')">COPY</button>
+            <button class="copy-btn" onclick="copyText(this, 'silakan lanjut konfirmasi di whatsapp untuk membuka akunnya kembali ya bosku https://wa.me/+6287744258298')">COPY</button>
         </div>
 		
 			<div class="box">
@@ -943,111 +983,111 @@ onclick="openModal('hadiahModal')">
         <div class="note-title">RUNGKAT</div>
 		
 		<div class="box">
-            <span>apabila permainan yang bosku mainkan barusan belum hoki, boleh dicoba di permainan lainnya ya bosku</span>
+            <span>Apabila permainan yang bosku mainkan barusan belum hoki, boleh dicoba di permainan lainnya ya bosku</span>
             <button class="copy-btn" onclick="copyText(this, 'apabila permainan yang bosku mainkan barusan belum hoki, boleh dicoba di permainan lainnya ya bosku')">COPY</button>
         </div>
 		
         <div class="box">
-            <span>jangan dipaksakan main di satu game kalau belum beruntung ya bosku</span>
+            <span>Jangan dipaksakan main di satu game kalau belum beruntung ya bosku</span>
             <button class="copy-btn" onclick="copyText(this, 'jangan dipaksakan main di satu game kalau belum beruntung ya bosku')">COPY</button>
         </div>
 
         <div class="box">
-            <span>silahkan dicoba bosku semoga mendapatkan jp maxwin seperti member minitoto lainnya ya</span>
+            <span>Silahkan dicoba bosku semoga mendapatkan jp maxwin seperti member minitoto lainnya ya</span>
             <button class="copy-btn" onclick="copyText(this, 'silahkan dicoba bosku semoga mendapatkan jp maxwin seperti member minitoto lainnya ya')">COPY</button>
         </div>
 
         <div class="box">
-            <span>boleh dicoba dulu ya bosku, siapa tahu hari ini rezeki bosku bagus di game yang kami sarankan</span>
+            <span>Boleh dicoba dulu ya bosku, siapa tahu hari ini rezeki bosku bagus di game yang kami sarankan</span>
             <button class="copy-btn" onclick="copyText(this, 'boleh dicoba dulu ya bosku, siapa tahu hari ini rezeki bosku bagus di game yang kami sarankan')">COPY</button>
         </div>
 
         <div class="box">
-            <span>di coba saran dari kami ya bosku,sudah banyak member kita yang profit dan wd di permainan tersebut, semoga bosku juga hoki</span>
+            <span>Di coba saran dari kami ya bosku,sudah banyak member kita yang profit dan wd di permainan tersebut, semoga bosku juga hoki</span>
             <button class="copy-btn" onclick="copyText(this, 'di coba saran dari kami ya bosku,sudah banyak member kita yang profit dan wd di permainan tersebut, semoga bosku juga hoki')">COPY</button>
         </div>
 
         <div class="box">
-            <span>dicoba mainnya pelan-pelan dulu bosku, semoga setelah bosku mainkan lagi bisa wd ya</span>
+            <span>Dicoba mainnya pelan-pelan dulu bosku, semoga setelah bosku mainkan lagi bisa wd ya</span>
             <button class="copy-btn" onclick="copyText(this, 'dicoba mainnya pelan-pelan dulu bosku, semoga setelah bosku mainkan lagi bisa wd ya')">COPY</button>
         </div>
 
         <div class="box">
-            <span>dicoba dulu ya bosku, kalau belum dicoba bagaimana bisa tahu hasilnya, bisa jadi setelah bos coba bisa jp</span>
+            <span>Dicoba dulu ya bosku, kalau belum dicoba bagaimana bisa tahu hasilnya, bisa jadi setelah bos coba bisa jp</span>
             <button class="copy-btn" onclick="copyText(this, 'dicoba dulu ya bosku, kalau belum dicoba bagaimana bisa tahu hasilnya, bisa jadi setelah bos coba bisa jp')">COPY</button>
         </div>
 		
 		<div class="box">
-            <span>dimainkan lagi saran permainan dari kami bosku, mudah-mudahan tembus scatter JP ya </span>
+            <span>Dimainkan lagi saran permainan dari kami bosku, mudah-mudahan tembus scatter JP ya </span>
             <button class="copy-btn" onclick="copyText(this, 'dimainkan lagi saran permainan dari kami bosku, mudah-mudahan tembus scatter JP ya ')">COPY</button>
         </div>
 		
 		<div class="box">
-            <span>pasti bisa dimenangkan selagi bosku tidak menyerah bosku pasti bisa jp juga seperti member lainnya</span>
+            <span>Pasti bisa dimenangkan selagi bosku tidak menyerah bosku pasti bisa jp juga seperti member lainnya</span>
             <button class="copy-btn" onclick="copyText(this, 'pasti bisa dimenangkan selagi bosku tidak menyerah bosku pasti bisa jp juga seperti member lainnya')">COPY</button>
         </div>
 		<div class="box">
-            <span>tidak ada kemenangan yang mustahil bosku raih selagi bosku tidak patah semangat dan kembali mencoba ya</span>
+            <span>Tidak ada kemenangan yang mustahil bosku raih selagi bosku tidak patah semangat dan kembali mencoba ya</span>
             <button class="copy-btn" onclick="copyText(this, 'tidak ada kemenangan yang mustahil bosku raih selagi bosku tidak patah semangat dan kembali mencoba ya')">COPY</button>
         </div>
 		
 		<div class="box">
-            <span>dibalik kekalahan pasti ada kemenangan yang tidak terduga ya bosku, dicoba kembali ya bosku</span>
+            <span>Dibalik kekalahan pasti ada kemenangan yang tidak terduga ya bosku, dicoba kembali ya bosku</span>
             <button class="copy-btn" onclick="copyText(this, 'dibalik kekalahan pasti ada kemenangan yang tidak terduga ya bosku, dicoba kembali ya bosku')">COPY</button>
         </div>
 		
 		<div class="box">
-            <span>dicoba kembali ya bosku, mudah-mudahan setelah bosku mainkan bisa menang dan wd ya</span>
+            <span>Dicoba kembali ya bosku, mudah-mudahan setelah bosku mainkan bisa menang dan wd ya</span>
             <button class="copy-btn" onclick="copyText(this, 'dicoba kembali ya bosku, mudah-mudahan setelah bosku mainkan bisa menang dan wd ya')">COPY</button>
         </div>
 		
 		<div class="box">
-            <span>bosku harus yakin dan optimis kalau bosku akan mendapatkan kemenangan jp sesuai dengan apa yg bosku harapkan</span>
+            <span>Bosku harus yakin dan optimis kalau bosku akan mendapatkan kemenangan jp sesuai dengan apa yg bosku harapkan</span>
             <button class="copy-btn" onclick="copyText(this, 'bosku harus yakin dan optimis kalau bosku akan mendapatkan kemenangan jp sesuai dengan apa yg bosku harapkan')">COPY</button>
         </div>
 		
 		<div class="box">
-            <span>jangan langsung pesimis dulu bosku, mudah-mudahan di game yang kami sarankan bosku bisa menang dan wd ya</span>
+            <span>Jangan langsung pesimis dulu bosku, mudah-mudahan di game yang kami sarankan bosku bisa menang dan wd ya</span>
             <button class="copy-btn" onclick="copyText(this, 'jangan langsung pesimis dulu bosku, mudah-mudahan di game yang kami sarankan bosku bisa menang dan wd ya')">COPY</button>
         </div>
 		
 		<div class="box">
-            <span>coba bermain lebih tenang lagi bosku, sudah banyak kok member kita yang jp dan wd karna usaha dan kegigihan mereka yang tidak patah semangat </span>
+            <span>Coba bermain lebih tenang lagi bosku, sudah banyak kok member kita yang jp dan wd karna usaha dan kegigihan mereka yang tidak patah semangat </span>
             <button class="copy-btn" onclick="copyText(this, 'coba bermain lebih tenang lagi bosku, sudah banyak kok member kita yang jp dan wd karna usaha dan kegigihan mereka yang tidak patah semangat ')">COPY</button>
         </div>
 		
 		<div class="box">
-            <span>coba lagi ya bosku jangan langsung menyerah masih banyak peluang menang bosku</span>
+            <span>Coba lagi ya bosku jangan langsung menyerah masih banyak peluang menang bosku</span>
             <button class="copy-btn" onclick="copyText(this, 'coba lagi ya bosku jangan langsung menyerah masih banyak peluang menang bosku')">COPY</button>
         </div>
 		
 		<div class="box">
-            <span>dalam permainan pasti ada menang ada kalah nya yah bosku, masih ada beribu kesempatan untuk mendapatkan kemenangan tersebut, tetap semangat yah bosku</span>
+            <span>Dalam permainan pasti ada menang ada kalah nya yah bosku, masih ada beribu kesempatan untuk mendapatkan kemenangan tersebut, tetap semangat yah bosku</span>
             <button class="copy-btn" onclick="copyText(this, 'dalam permainan pasti ada menang ada kalah nya yah bosku, masih ada beribu kesempatan untuk mendapatkan kemenangan tersebut, tetap semangat yah bosku')">COPY</button>
         </div>
 		
 		<div class="box">
-            <span>coba kembali ya bosku kemenangan di dapat dari usaha member yg pantang menyerah dan kembali mencoba</span>
+            <span>Coba kembali ya bosku kemenangan di dapat dari usaha member yg pantang menyerah dan kembali mencoba</span>
             <button class="copy-btn" onclick="copyText(this, 'coba kembali ya bosku kemenangan di dapat dari usaha member yg pantang menyerah dan kembali mencoba')">COPY</button>
         </div>
 		
 		<div class="box">
-            <span>bossku, kalau soal JP, nggak ada yang tahu pasti. Kadang datang pas iseng main, kadang pas hampir menyerah. Intinya tetap sabar dan semangat ya.</span>
+            <span>Bosku, kalau soal JP, nggak ada yang tahu pasti. Kadang datang pas iseng main, kadang pas hampir menyerah. Intinya tetap sabar dan semangat ya.</span>
             <button class="copy-btn" onclick="copyText(this, 'bossku, kalau soal JP, nggak ada yang tahu pasti. Kadang datang pas iseng main, kadang pas hampir menyerah. Intinya tetap sabar dan semangat ya.')">COPY</button>
         </div>
 		
 		<div class="box">
-            <span>bossku, kadang memang hasil belum sesuai harapan. Tapi semua game di sini real dan fair play. Semoga di next spin bossku lebih hoki, tetap semangat ya </span>
+            <span>Bosku, kadang memang hasil belum sesuai harapan. Tapi semua game di sini real dan fair play. Semoga di next spin bossku lebih hoki, tetap semangat ya </span>
             <button class="copy-btn" onclick="copyText(this, 'bossku, kadang memang hasil belum sesuai harapan. Tapi semua game di sini real dan fair play. Semoga di next spin bossku lebih hoki, tetap semangat ya ')">COPY</button>
         </div>
 		
 		<div class="box">
-            <span>sampaikan kendalanya dengan tidak berkata kasar dan dimohon tidak melakukan spam pesan chatt ya bosku</span>
+            <span>Sampaikan kendalanya dengan tidak berkata kasar dan dimohon tidak melakukan spam pesan chatt ya bosku</span>
             <button class="copy-btn" onclick="copyText(this, 'sampaikan kendalanya dengan tidak berkata kasar dan dimohon tidak melakukan spam pesan chatt ya bosku')">COPY</button>
         </div>
 		
 		<div class="box">
-            <span>jika masih ada yang ingin disampaikan silakan lanjut obrolan di whatsapp minitoto ya bosku</span>
+            <span>Jika masih ada yang ingin disampaikan silakan lanjut obrolan di whatsapp minitoto ya bosku</span>
             <button class="copy-btn" onclick="copyText(this, 'jika masih ada yang ingin disampaikan silakan lanjut obrolan di whatsapp minitoto ya bosku')">COPY</button>
         </div>
 		
@@ -1091,7 +1131,9 @@ window.onclick = function(e){
 </script>
 
 <script>
+
 function openBankEwallet(type){
+
     const modal = document.getElementById("bankEwalletModal");
     const list = document.getElementById("beList");
     const title = document.getElementById("beTitle");
@@ -1099,50 +1141,174 @@ function openBankEwallet(type){
     list.innerHTML = "";
 
     if(type === "bank"){
-        title.innerText = "🏦 BANK";
+
+        title.innerText = "🏦 PILIH BANK";
 
         const banks = [
-            {name:"SEABANK", icon:"https://img.icons8.com/color/48/bank-building.png"},
-            {name:"BANK JAGO", icon:"https://img.icons8.com/color/48/bank-building.png"},
-            {name:"NEOBANK", icon:"https://img.icons8.com/color/48/bank-building.png"},
-            {name:"SUPERBANK", icon:"https://img.icons8.com/color/48/bank-building.png"},
-            {name:"ALLOBANK", icon:"https://img.icons8.com/color/48/bank-building.png"}
+            {name:"SEABANK", gambar:"poto/seabank.png"},
+            {name:"BANKJAGO", gambar:"poto/bankjago.png"},
+            {name:"NEOBANK", gambar:"poto/neobank.png"},
+            {name:"SUPERBANK", gambar:"poto/superbank.png"},
+            {name:"ALLOBANK", gambar:"poto/allobank.png"}
         ];
 
-        banks.forEach(b=>{
+        banks.forEach(bank=>{
+
             list.innerHTML += `
-                <div class="be-item">
-                    <img src="${b.icon}">
-                    <span>${b.name}</span>
+                <div class="be-item"
+                     onclick="showBankImage('${bank.name}','${bank.gambar}','bank')">
+                    🏦 ${bank.name}
                 </div>
             `;
+
         });
+
     }
 
     if(type === "ewallet"){
-        title.innerText = "💳 EWALLET";
+
+        title.innerText = "💳 PILIH EWALLET";
 
         const wallets = [
-            {name:"DANA", icon:"https://img.icons8.com/color/48/dana.png"},
-            {name:"OVO", icon:"https://img.icons8.com/color/48/ovo.png"},
-            {name:"LINKAJA", icon:"https://img.icons8.com/color/48/linkedin.png"},
-            {name:"GOPAY", icon:"https://img.icons8.com/color/48/gopay.png"},
-            {name:"SHOPEEPAY", icon:"https://img.icons8.com/color/48/shopee.png"}
+            {name:"DANA", gambar:"poto/dana.png"},
+            {name:"OVO", gambar:"poto/ovo.png"},
+            {name:"GOPAY", gambar:"poto/gopay.png"},
+            {name:"LINKAJA", gambar:"poto/linkaja.png"},
+            {name:"SHOPEEPAY", gambar:"poto/shopeepay.png"}
         ];
 
-        wallets.forEach(w=>{
+        wallets.forEach(wallet=>{
+
             list.innerHTML += `
-                <div class="be-item">
-                    <img src="${w.icon}">
-                    <span>${w.name}</span>
+                <div class="be-item"
+                     onclick="showBankImage('${wallet.name}','${wallet.gambar}','ewallet')">
+                    💳 ${wallet.name}
                 </div>
             `;
+
         });
+
     }
 
     modal.style.display = "flex";
 }
+
+function showBankImage(nama, gambar, type){
+
+    document.getElementById("beTitle").innerText = nama;
+
+    document.getElementById("beList").innerHTML = `
+        <div class="bank-preview">
+
+            <button class="back-btn"
+                    onclick="openBankEwallet('${type}')">
+                ⬅ Kembali
+            </button>
+
+            <img src="${gambar}" alt="${nama}">
+
+        </div>
+    `;
+}
+
 </script>
+
+<script>
+
+function openBuktiTransfer(){
+
+    const modal = document.getElementById("buktiTransferModal");
+    const list = document.getElementById("btList");
+
+    document.getElementById("btTitle").innerText =
+        "📄 PILIH BUKTI TRANSFER";
+
+    const data = [
+        {name:"BCA", gambar:"bukti/bca.png"},
+        {name:"BRI", gambar:"bukti/bri.png"},
+        {name:"BNI", gambar:"bukti/bni.png"},
+        {name:"MANDIRI", gambar:"bukti/mandiri.png"},
+        {name:"DANA", gambar:"bukti/dana.png"},
+        {name:"OVO", gambar:"bukti/ovo.png"},
+        {name:"GOPAY", gambar:"bukti/gopay.png"},
+        {name:"LINKAJA", gambar:"bukti/linkaja.png"},
+        {name:"SHOPEEPAY", gambar:"bukti/shopeepay.png"}
+    ];
+
+    list.innerHTML = "";
+
+    data.forEach(item => {
+
+        list.innerHTML += `
+            <div class="be-item"
+                 onclick="showBuktiTransfer(
+                    '${item.name}',
+                    '${item.gambar}'
+                 )">
+
+                📄 ${item.name}
+
+            </div>
+        `;
+
+    });
+
+    modal.style.display = "flex";
+}
+
+function showBuktiTransfer(nama, gambar){
+
+    document.getElementById("btTitle").innerText = nama;
+
+    document.getElementById("btList").innerHTML = `
+        <div class="bank-preview">
+
+            <button class="back-btn"
+                    onclick="openBuktiTransfer()">
+                ⬅ Kembali
+            </button>
+
+            <img src="${gambar}" alt="${nama}">
+
+        </div>
+    `;
+}
+
+</script>
+
+<!-- POPUP FORM BAJU -->
+<div id="formBajuModal" class="modal">
+    <div class="modal-content">
+        <span class="close"
+              onclick="closeModal('formBajuModal')">&times;</span>
+
+        <h2>👕 FORM BAJU</h2>
+
+        <div class="modal-scroll">
+
+<pre id="formBajuText">Username:
+Nama:
+Nomor HP:
+Alamat:
+RT/RW:
+Kecamatan:
+Kabupaten:
+Provinsi:
+Kode Pos:
+Ukuran Baju:
+
+Patokan:
+Link Sharelok: </pre>
+
+<button class="copy-btn"
+onclick="copyText(this, document.getElementById('formBajuText').innerText)">
+COPY
+</button>
+
+        </div>
+    </div>
+</div>
+
 
 <!-- POPUP JADWAL -->
 <div id="jadwalModal" class="modal">
@@ -1656,6 +1822,19 @@ DISKON UNTUK BET DISKON ( HANYA BET DISKON BARU DAPAT DISKON) :
         <h2 id="beTitle">LIST</h2>
 
         <div class="modal-scroll" id="beList">
+        </div>
+    </div>
+</div>
+
+<!-- POPUP BUKTI TRANSFER -->
+<div id="buktiTransferModal" class="modal">
+    <div class="modal-content">
+        <span class="close"
+              onclick="closeModal('buktiTransferModal')">&times;</span>
+
+        <h2 id="btTitle">BUKTI TRANSFER</h2>
+
+        <div class="modal-scroll" id="btList">
         </div>
     </div>
 </div>
