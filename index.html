@@ -509,6 +509,43 @@ body::before{
     background:#1976d2;
 }
 
+.link-item{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:12px;
+    margin-bottom:10px;
+
+    background:#2a2a2a;
+    border-radius:12px;
+}
+
+.link-actions{
+    display:flex;
+    gap:8px;
+}
+
+.open-link{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    min-width:70px;
+    height:33px;
+
+    background:#00a86b;
+    color:#fff;
+    text-decoration:none;
+
+    border-radius:10px;
+    font-weight:700;
+}
+
+.open-link:hover{
+    background:#00c57d;
+}
+
 </style>
 </head>
 <body>
@@ -813,8 +850,8 @@ Link Facebook: https://www.facebook.com/groups/minitotogroup2`)">
     <div class="note-pad">
         <div class="note-title">KENDALA UMUM</div>
 		<div class="box">
-            <span>Coba hapus history dan data cache browsernya terlebih dahulu supaya lancar bosku, kemudian coba login ulang pakai link ini ya https://gesya.me/mnttutama</span>
-            <button class="copy-btn" onclick="copyText(this, 'coba hapus history dan data cache browsernya terlebih dahulu supaya lancar bosku, kemudian coba login ulang pakai link ini ya https://gesya.me/mnttutama')">COPY</button>
+            <span>Hapus history dan data cache browsernya terlebih dahulu supaya lancar bosku, kemudian coba login ulang pakai link ini ya https://gesya.me/mnttutama</span>
+            <button class="copy-btn" onclick="copyText(this, 'hapus history dan data cache browsernya terlebih dahulu supaya lancar bosku, kemudian coba login ulang pakai link ini ya https://gesya.me/mnttutama')">COPY</button>
         </div>
 		
 		<div class="box">
@@ -1090,6 +1127,12 @@ onclick="openModal('hadiahModal')">
             <span>Jika masih ada yang ingin disampaikan silakan lanjut obrolan di whatsapp minitoto ya bosku</span>
             <button class="copy-btn" onclick="copyText(this, 'jika masih ada yang ingin disampaikan silakan lanjut obrolan di whatsapp minitoto ya bosku')">COPY</button>
         </div>
+		
+		<div class="menu-togel">
+    <button type="button" class="menu-btn"
+onclick="openModal('ListLinkModal')">
+    🔗 LINK AKTIF
+</button>
 		
 		
     </div>
@@ -1813,6 +1856,90 @@ DISKON UNTUK BET DISKON ( HANYA BET DISKON BARU DAPAT DISKON) :
         </div>
     </div>
 </div>
+
+<!-- POPUP LINK AKTIF-->
+<div id="ListLinkModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('ListLinkModal')">&times;</span>
+
+        <h2>📅 LIST LINK</h2>
+		<br>
+        <div class="modal-scroll">
+
+    <div class="link-item">
+        <span>LOGIN MEMBER</span>
+        <div class="link-actions">
+            <a href="https://gesya.me/mnttutama" target="_blank" class="open-link">BUKA</a>
+            <button class="copy-btn" onclick="copyText(this,'https://gesya.me/mnttutama')">COPY</button>
+        </div>
+    </div>
+
+    <div class="link-item">
+        <span>RTP</span>
+        <div class="link-actions">
+            <a href="https://gesya.me/mnttrtp" target="_blank" class="open-link">BUKA</a>
+            <button class="copy-btn" onclick="copyText(this,'https://gesya.me/mnttrtp')">COPY</button>
+        </div>
+    </div>
+
+    <div class="link-item">
+        <span>PREDIKSI</span>
+        <div class="link-actions">
+            <a href="https://gesya.me/mnttpredik" target="_blank" class="open-link">BUKA</a>
+            <button class="copy-btn" onclick="copyText(this,'https://gesya.me/mnttpredik')">COPY</button>
+        </div>
+    </div>
+
+    <div class="link-item">
+        <span>BUKTI JP</span>
+        <div class="link-actions">
+            <a href="https://gesya.me/mnttjp" target="_blank" class="open-link">BUKA</a>
+            <button class="copy-btn" onclick="copyText(this,'https://gesya.me/mnttjp')">COPY</button>
+        </div>
+    </div>
+
+    <div class="link-item">
+        <span>PROMOSI</span>
+        <div class="link-actions">
+            <a href="https://gesya.me/mnttpromo" target="_blank" class="open-link">BUKA</a>
+            <button class="copy-btn" onclick="copyText(this,'https://gesya.me/mnttpromo')">COPY</button>
+        </div>
+    </div>
+
+    <div class="link-item">
+        <span>PANDUAN</span>
+        <div class="link-actions">
+            <a href="https://gesya.me/panduanmini" target="_blank" class="open-link">BUKA</a>
+            <button class="copy-btn" onclick="copyText(this,'https://gesya.me/panduanmini')">COPY</button>
+        </div>
+    </div>
+
+    <div class="link-item">
+        <span>LIVE CHAT</span>
+        <div class="link-actions">
+            <a href="https://gesya.me/livechatmntt" target="_blank" class="open-link">BUKA</a>
+            <button class="copy-btn" onclick="copyText(this,'https://gesya.me/livechatmntt')">COPY</button>
+        </div>
+    </div>
+
+    <div class="link-item">
+        <span>KONTAK MINITOTO</span>
+        <div class="link-actions">
+            <a href="https://gesya.me/kontakminitoto" target="_blank" class="open-link">BUKA</a>
+            <button class="copy-btn" onclick="copyText(this,'https://gesya.me/kontakminitoto')">COPY</button>
+        </div>
+    </div>
+
+    <div class="link-item">
+        <span>APK</span>
+        <div class="link-actions">
+            <a href="https://gesya.me/apkminitoto" target="_blank" class="open-link">BUKA</a>
+            <button class="copy-btn" onclick="copyText(this,'https://gesya.me/apkminitoto')">COPY</button>
+        </div>
+    </div>
+
+</div>
+
 
 <!-- POPUP BANK & EWALLET -->
 <div id="bankEwalletModal" class="modal">
