@@ -1134,12 +1134,32 @@ onclick="openModal('ListLinkModal')">
     🔗 LINK AKTIF
 </button>
 		
-		
     </div>
+	
+	<div class="note-title">PROMOSI </div>
+		<div class="box">
+
+    <span style="white-space: pre-line;">🎁 MINITOTO BAGI-BAGI 10 HP GRATIS SETIAP BULAN!
+    </span>
+
+    <button class="copy-btn"
+    onclick="copyText(this, `🎁 MINITOTO BAGI-BAGI 10 HP GRATIS SETIAP BULAN!
+Tanpa biaya, tanpa syarat ribet!
+
+📲 Cukup jadi member aktif, dan otomatis ikut undian!
+🎯 Semua punya peluang yang sama, bosku!
+🎯 Pemenang akan dipilih secara acak (random) di antara semua member aktif, jadi semua punya peluang yang sama, bosku!
+
+Terus main & aktif, siapa tahu bosku yang beruntung bulan ini! 🍀`)">
+    COPY
+    </button>
+
+</div>
 	
 </div>
 
 <script>
+
 function copyText(button, text){
 
     navigator.clipboard.writeText(text);
@@ -1329,18 +1349,18 @@ function showBuktiTransfer(nama, gambar){
 
         <div class="modal-scroll">
 
-<pre id="formBajuText">Username: 
-Nama: 
-Nomor HP: 
-Alamat: 
-RT/RW: 
-Kecamatan: 
-Kabupaten: 
-Provinsi: 
-Kode Pos: 
-Ukuran Baju: 
+<pre id="formBajuText">Username:
+Nama:
+Nomor HP:
+Alamat:
+RT/RW:
+Kecamatan:
+Kabupaten:
+Provinsi:
+Kode Pos:
+Ukuran Baju:
 
-Patokan: 
+Patokan:
 Link Sharelok: </pre>
 
 <button class="copy-btn"
@@ -1941,6 +1961,1998 @@ DISKON UNTUK BET DISKON ( HANYA BET DISKON BARU DAPAT DISKON) :
 </div>
 </div>
 </div>
+
+
+<!-- POPUP BANK & EWALLET -->
+<div id="bankEwalletModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('bankEwalletModal')">&times;</span>
+
+        <h2 id="beTitle">LIST</h2>
+
+        <div class="modal-scroll" id="beList">
+        </div>
+    </div>
+</div>
+
+<!-- POPUP BUKTI TRANSFER -->
+<div id="buktiTransferModal" class="modal">
+    <div class="modal-content">
+        <span class="close"
+              onclick="closeModal('buktiTransferModal')">&times;</span>
+
+        <h2 id="btTitle">BUKTI TRANSFER</h2>
+
+        <div class="modal-scroll" id="btList">
+        </div>
+    </div>
+</div>
+
+</body>
+</html><!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NOTEPAD LIVECHATT</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700;800&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body{
+    min-height:100vh;
+    padding:12px;
+
+    background: url("bg/gambar1.jpg") center/cover no-repeat;
+    font-family: 'Inter', sans-serif;
+}
+
+body::before{
+    content:"";
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+
+    background:url("https://www.transparenttextures.com/patterns/dark-fish-skin.png");
+    opacity:0.05;
+    pointer-events:none;
+}
+
+
+.title{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:12px;
+	font-family:'Orbitron',sans-serif;
+    font-size:35px;
+    font-weight:700;
+
+    margin-bottom:25px;
+
+    color:#ffffff;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+
+    text-shadow:
+        0 2px 5px rgba(0,0,0,0.6),
+        0 0 10px rgba(255,255,255,0.15),
+        0 0 20px rgba(0,140,255,0.25);
+
+    background: url("bg/gambar26.jpg") left;
+
+    border:1px solid rgba(255,255,255,0.15);
+
+    padding:4px 28px;
+
+    border-radius:18px;
+
+    backdrop-filter:blur(12px);
+
+    width:fit-content;
+
+    margin-left:auto;
+    margin-right:auto;
+
+    box-shadow:
+    0 6px 20px rgba(0,123,255,0.35),
+    0 0 25px rgba(66,165,255,0.25);
+	
+	position:relative;
+	overflow:hidden;
+}
+
+.title::before{
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:-120%;
+
+    width:14%;
+
+    height:100%;
+
+    background:linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,0.25),
+        transparent
+    );
+
+    transform:skewX(-25deg);
+
+    animation:titleShine 5s linear infinite;
+}
+
+.logo{
+    font-size:38px;
+
+    filter:
+        drop-shadow(0 0 8px rgba(255,255,255,0.4))
+        drop-shadow(0 0 15px rgba(0,140,255,0.35));
+}
+
+.note-pad{
+   width:100%;
+
+    background:rgba(0,0,0,0.55);
+
+    border:3px solid rgba(255,255,255,0.15);
+
+    backdrop-filter:blur(14px);
+
+    padding:18px;
+
+    border-radius:28px;
+
+    box-shadow:
+    0 0 25px rgba(0,0,0,0.6),
+    0 0 15px rgba(0,0,0,0.4);
+}
+
+.note-title{
+     font-size:23px;
+    font-weight:700;
+
+    color:#1a1a1a; 
+
+    background:linear-gradient(135deg,#ffffff 0%,#f8f8f8 35%,#e9e9e9 70%,#ffffff 100%);
+
+    padding:8px 14px;
+    border-radius:10px;
+
+    margin-bottom:12px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    width:100%;
+    text-align:center;
+
+    box-shadow:
+    0 0 12px rgba(212,175,55,0.5),
+    0 0 20px rgba(245,215,110,0.3);
+}
+
+.box{
+    position:relative;
+
+    width:100%;
+    min-height:90px;
+
+    padding:12px 15px;
+    margin-bottom:18px;
+
+    background-color: #010101;
+
+    border:1px solid rgba(255,255,255,0.15);
+
+    border-radius:22px;
+
+    display:flex;
+
+    align-items:flex-start; /* ubah dari center */
+
+    box-sizing:border-box;
+
+    color:white;
+
+    font-size:23px;
+    font-weight:400;
+
+    box-shadow:
+        0 6px 18px rgba(0,0,0,0.4);
+
+    overflow:visible;
+}
+
+.box-content{
+    width:100%;
+
+    padding-right:100px;
+
+    line-height:1.4;
+
+    word-break:break-word;
+
+    overflow:hidden;
+
+    text-align:left;
+}
+
+.box span{
+    flex:1;
+    color:white;
+
+    white-space:normal;       
+    word-break:break-word;    
+    overflow-wrap:break-word; 
+
+    text-align:left;
+}
+
+.box-content{
+    flex:1;
+
+    white-space:normal;
+
+    word-break:break-word;
+
+    overflow-wrap:break-word;
+
+    display:block;
+
+    line-height:1.5;
+
+    padding-right:90px;
+}
+
+.copy-btn{
+    position:relative;
+
+    background:linear-gradient(
+        135deg,
+        #007bff 0%,
+        #2196f3 50%,
+        #42a5ff 100%
+    );
+
+    color:#ffffff;
+
+    border:none;
+
+    padding:6px 14px;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    font-weight:700;
+
+    transition:0.25s;
+
+    box-shadow:
+        0 0 10px rgba(0,123,255,0.35),
+        0 0 18px rgba(66,165,255,0.25);
+
+    flex-shrink:0;
+
+    align-self:flex-end;
+
+    min-width:60px;
+    height:33px;
+
+    overflow:hidden; /* penting */
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.copy-btn::before{
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:-120%;
+
+    width:18%; /* garis tipis */
+
+    height:100%;
+
+    background:linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,0.28),
+        transparent
+    );
+
+    transform:skewX(-25deg);
+
+    animation:copyShine 4s linear infinite;
+}
+
+.copy-btn:hover{
+    transform:translateY(-2px);
+
+    box-shadow:
+        0 0 15px rgba(0,123,255,0.45),
+        0 0 25px rgba(66,165,255,0.35);
+}
+
+.copy-btn.copied{
+    background:linear-gradient(
+        135deg,
+        #00c853,
+        #00e676
+    );
+
+    color:white;
+
+    box-shadow:
+        0 0 15px rgba(0,255,120,0.45);
+
+    transform:none;
+}
+
+.container{
+    display:grid;
+
+    grid-template-columns:repeat(4, 1fr);
+
+    gap:12px;
+
+    width:100%;
+
+    align-items:start;
+}
+
+@media(max-width:1200px){
+    .container{
+        grid-template-columns:repeat(2, 1fr);
+    }
+}
+
+@media(max-width:600px){
+    .container{
+        grid-template-columns:1fr;
+    }
+	
+}
+
+@keyframes gradientMove{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+@keyframes copyShine{
+    0%{
+        left:-120%;
+    }
+    100%{
+        left:150%;
+    }
+}
+
+@keyframes titleShine{
+    0%{
+        left:-120%;
+    }
+    100%{
+        left:150%;
+    }
+}
+
+.menu-togel{
+    display:flex;
+    gap:10px;
+    margin-top:12px;
+}
+
+.menu-btn{
+    flex:1;
+    padding:12px;
+    border:none;
+    border-radius:12px;
+    cursor:pointer;
+
+    color:#fff;
+    font-weight:700;
+    font-size:19px;
+
+    background:linear-gradient(
+    135deg,
+    #00897b,
+    #00acc1
+);
+
+    border:1px solid rgba(255,255,255,.15);
+
+    text-shadow:0 1px 2px rgba(0,0,0,.5);
+
+    box-shadow:
+        0 4px 12px rgba(13,71,161,.35);
+
+    transition:.25s;
+}
+
+.menu-btn:hover{
+    transform:translateY(-2px);
+
+    background:linear-gradient(
+    135deg,
+    #009688,
+    #26c6da
+);
+
+    box-shadow:
+        0 6px 18px rgba(21,101,192,.45);
+}
+
+.menu-btn:last-child{
+    background:linear-gradient(135deg,#00897b,#00acc1);
+}
+
+.menu-togel{
+    display:flex;
+    gap:10px;
+    margin-top:15px;
+	margin-bottom:20px;
+}
+
+
+.modal{
+    display:none;
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.75);
+    z-index:9999;
+    justify-content:center;
+    align-items:center;
+}
+
+.modal-content{
+    width:95%;
+    max-width:850px;
+    max-height:85vh;
+    background:#1a1a1a;
+    border-radius:20px;
+    padding:20px;
+    color:#fff;
+}
+
+.modal-content h2{
+    margin-bottom:15px;
+}
+
+.modal-scroll{
+    max-height:65vh;
+    overflow-y:auto;
+}
+
+.modal-scroll pre{
+    white-space:pre-wrap;
+    line-height:1.6;
+}
+
+.close{
+    float:right;
+    font-size:30px;
+    cursor:pointer;
+}
+
+.be-item{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    padding:12px;
+    margin-bottom:10px;
+    background:#2a2a2a;
+    border-radius:12px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.be-item:hover{
+    background:#3a3a3a;
+}
+
+.bank-preview{
+    text-align:center;
+}
+
+.bank-preview img{
+    width:100%;
+    max-width:450px;
+    border-radius:12px;
+    margin-top:15px;
+}
+
+.back-btn{
+    background:#1565c0;
+    color:#fff;
+    border:none;
+    padding:10px 18px;
+    border-radius:10px;
+    cursor:pointer;
+    font-weight:700;
+    margin-bottom:15px;
+}
+
+.back-btn:hover{
+    background:#1976d2;
+}
+
+.link-item{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:12px;
+    margin-bottom:10px;
+
+    background:#2a2a2a;
+    border-radius:12px;
+}
+
+.link-actions{
+    display:flex;
+    gap:8px;
+}
+
+.open-link{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    min-width:70px;
+    height:33px;
+
+    background:#00a86b;
+    color:#fff;
+    text-decoration:none;
+
+    border-radius:10px;
+    font-weight:700;
+}
+
+.open-link:hover{
+    background:#00c57d;
+}
+
+</style>
+</head>
+<body>
+
+<h1 class="title">
+    <span class="logo">📝</span>
+    NOTEPAD YOGIK 
+</h1>
+
+<div class="container">
+
+    <!-- NOTE PAD 1 -->
+    <div class="note-pad">
+        <div class="note-title">BONUS CASHBACK</div>
+
+        <div class="box">
+            <span>Pembagian Bonus Kekalahan ( Cashback )  SLOT hanya di berikan setiap hari Jumat ya bosku</span>
+            <button class="copy-btn" onclick="copyText(this, 'pembagian Bonus Kekalahan ( Cashback )  SLOT hanya di berikan setiap hari Jumat ya bosku')">COPY</button>
+        </div>
+		
+		<div class="box">
+            <span>Pembagian Bonus Kekalahan ( Cashback )  LIVE GAME hanya di berikan setiap hari Selasa ya bosku</span>
+            <button class="copy-btn" onclick="copyText(this, 'pembagian Bonus Kekalahan ( Cashback )  LIVE GAME hanya di berikan setiap hari Selasa ya bosku')">COPY</button>
+        </div>
+		
+		<div class="note-title">CEK BONUS CASHBACK</div>
+
+        <div class="box">
+            <span>Pada periode ( ) bosku terhitung menang dan tidak mendapatkan bonus cashback ya, cashback hanya diberikan kepada yang kalah minimal 50 ribu pada periode tersebut</span>
+            <button class="copy-btn" onclick="copyText(this, 'pada periode (  ) bosku terhitung menang dan tidak mendapatkan bonus cashback, cashback hanya diberikan kepada yang kalah minimal 50 ribu pada periode tersebut')">COPY</button>
+        </div>
+		
+		<div class="box">
+            <span>Untuk kekalahan bosku di minggu ini atau di luar periode tersebut, maka bonusnya akan masuk hitungan di jumat depan ya</span>
+            <button class="copy-btn" onclick="copyText(this, 'untuk kekalahan bosku di minggu ini atau di luar periode tersebut, maka bonusnya akan masuk hitungan di jumat depan ya')">COPY</button>
+        </div>
+		
+		<div class="box">
+            <span>Bonus dibagikan sesuai promo dan ketentuan yang berlaku ya bosku, jadi semuanya sesuai perhitungan dalam satu periode</span>
+            <button class="copy-btn" onclick="copyText(this, 'bonus dibagikan sesuai promo dan ketentuan yang berlaku ya bosku, jadi semuanya sesuai perhitungan dalam satu periode')">COPY</button>
+        </div>
+
+		<div class="note-title">BONUS ROLLINGAN</div>
+        <div class="box">
+            <span>Pembagian Bonus Rollingan hanya di berikan setiap hari Senin dan akan di Kreditkan secara otomatis ke akun bosku ya</span>
+            <button class="copy-btn" onclick="copyText(this, 'pembagian Bonus Rollingan hanya di berikan setiap hari Senin dan akan di Kreditkan secara otomatis ke akun bosku ya')">COPY</button>
+        </div>
+
+        <div class="box">
+            <span>Ditunggu sesuai jadwal ya bosku, bonus akan masuk dan di Kreditkan secara otomatis ke akun bosku nantinya sesuai jadwal</span>
+            <button class="copy-btn" onclick="copyText(this, 'ditunggu sesuai jadwal ya bosku, bonus akan masuk dan di Kreditkan secara otomatis ke akun bosku nantinya sesuai jadwal')">COPY</button>
+        </div>
+
+        <div class="box">
+            <span>Dibagikan mulai jam 2 pagi ya bosku, nanti bonus akan masuk paling lama jam 6 pagi sudah masuk semua</span>
+            <button class="copy-btn" onclick="copyText(this, 'dibagikan mulai jam 3 pagi ya bosku, nanti bonus akan masuk paling lama jam 6 pagi sudah masuk semua')">COPY</button>
+        </div>
+
+	<div class="note-title">BONUS DEPOSIT</div>
+
+		<div class="box">
+            <span>Silakan deposit dulu minimal 50 ribu langsung baru bisa klaim bonusnya ya bosku</span>
+            <button class="copy-btn" onclick="copyText(this, 'silakan deposit dulu minimal 50 ribu langsung baru bisa klaim bonusnya ya bosku')">COPY</button>
+        </div>
+		
+		<div class="box">
+            <span>Minimal deposit 50 ribu langsung untuk bisa claim bonusnya dan tidak berlaku total akumulasi deposit ya bosku</span>
+            <button class="copy-btn" onclick="copyText(this, 'minimal deposit 50 ribu langsung untuk bisa claim bonusnya dan tidak berlaku total akumulasi deposit ya bosku')">COPY</button>
+        </div>
+		
+		<div class="box">
+            <span>Bonus di klaim sebelum saldo deposit dimainkan ya bos, kalau sudah dimainkan tidak dapat di klaim lagi ya bosku</span>
+            <button class="copy-btn" onclick="copyText(this, 'bonus di klaim sebelum saldo deposit dimainkan ya bos, kalau sudah dimainkan tidak dapat di klaim lagi ya bosku')">COPY</button>
+        </div>
+		
+		<div class="box">
+            <span>Bonus diberikan sesuai ketentuan ya bosku, silakan deposit dulu dan bonusnya di claim sebelum saldo dimainkan ya</span>
+            <button class="copy-btn" onclick="copyText(this, 'bonus diberikan sesuai ketentuan ya bosku, silakan deposit dulu dan bonusnya di claim sebelum saldo dimainkan ya')">COPY</button>
+        </div>
+		
+
+	<div class="note-title">BAJU</div>
+
+        <div class="box">
+            <span>Silakan deposit dulu minimal 100 ribu langsung untuk bisa claim kaos dan tidak berlaku total akumulasi deposit ya bosku</span>
+            <button class="copy-btn" onclick="copyText(this, 'silakan deposit dulu minimal 100 ribu langsung untuk bisa claim kaos dan tidak berlaku total akumulasi deposit ya bosku')">COPY</button>
+        </div>
+
+		<div class="menu-togel">
+    <button type="button" class="menu-btn"
+            onclick="openModal('formBajuModal')">
+        👕 FORM BAJU
+    </button>
+</div>
+
+        <div class="box">
+            <span>Di salin saja formnya dan bosku tinggal isi alamat lengkapnya, sertakan patokan rumahnya misal rumah bosku dekat sekolah, rumah sakit, masjid atau bangunan lain yang mudah ditemukan</span>
+            <button class="copy-btn" onclick="copyText(this, 'di salin saja formnya dan bosku tinggal isi alamat lengkapnya, sertakan patokan rumahnya misal rumah bosku dekat sekolah, rumah sakit, masjid atau bangunan lain yang mudah ditemukan')">COPY</button>
+        </div>
+		
+		<div class="box">
+            <span>Dibantu kirim share lokasi supaya kurir mudah menemukan alamatnya ya bosku</span>
+            <button class="copy-btn" onclick="copyText(this, 'dibantu kirim share lokasi supaya kurir mudah menemukan alamatnya ya bosku')">COPY</button>
+        </div>
+		
+		<div class="note-title">FREECHIP APK</div>
+		
+		<div class="box">
+            <span>🔗Link APK MINITOTO : https://gesya.me/apkminitoto</span>
+            <button class="copy-btn" onclick="copyText(this, '🔗Link APK MINITOTO : https://gesya.me/apkminitoto')">COPY</button>
+        </div>
+		
+		<div class="box">
+            <span>Silakan deposit dulu minimal 50 ribu langsung di bulan ini baru bisa klaim bonusnya ya bosku, tidak berlaku total akumulasi deposit ya bosku</span>
+            <button class="copy-btn" onclick="copyText(this, 'silakan deposit dulu minimal 50 ribu langsung di bulan ini baru bisa klaim bonusnya ya bosku, tidak berlaku total akumulasi deposit ya bosku')">COPY</button>
+        </div>
+		
+		<div class="box">
+            <span>Silakan login dulu ke apknya bosku, kemudian screenshot full tampilannya dan kirim kesini ya</span>
+            <button class="copy-btn" onclick="copyText(this, 'silakan login dulu ke apknya bosku, kemudian screenshot full tampilannya dan kirim kesini ya')">COPY</button>
+        </div>
+		
+		<div class="box">
+            <span>Dicekkan id bosku sudah pernah claim sebelumnya ya jadi tidak bisa lagi, satu id hanya bisa sekali claim saja ya bosku</span>
+            <button class="copy-btn" onclick="copyText(this, 'dicekkan id bosku sudah pernah claim sebelumnya ya jadi tidak bisa lagi, satu id hanya bisa sekali claim saja ya bosku')">COPY</button>
+        </div>
+		
+		<div class="box">
+            <span>Dicekkan ada kesaamaan IP dengan id lain, jadi bonusnya tidak bisa di claim lagi ya bosku</span>
+            <button class="copy-btn" onclick="copyText(this, 'dicekkan ada kesaamaan IP dengan id lain, jadi bonusnya tidak bisa di claim lagi ya bosku')">COPY</button>
+        </div>
+		
+		<div class="note-title">CLAIM FREESPIN</div>
+		
+		<div class="box">
+
+    <span style="white-space: pre-line;">Silakan share dulu hasil kemenangan Game + Bill History di Grup Facebook dengan Hashtag #SLOTGACOR #MINITOTO #CLAIMFREESPIN
+
+Link Facebook: https://www.facebook.com/groups/minitotogroup2
+    </span>
+
+    <button class="copy-btn"
+    onclick="copyText(this, `Silakan share dulu hasil kemenangan Game + Bill History di Grup Facebook dengan Hashtag #SLOTGACOR #MINITOTO #CLAIMFREESPIN
+
+Link Facebook: https://www.facebook.com/groups/minitotogroup2`)">
+    COPY
+    </button>
+
+</div>
+		
+		<div class="note-title">HP GRATIS & LOMBA TO</div>
+		
+		<div class="box">
+		<span>Bosku cukup selalu aktif bermain di mini toto dan bosku akan berkesempatan menangkan hadiah handphone nya yg akan di umumkan di setiap bulan nya</span>
+            <button class="copy-btn" onclick="copyText(this, 'bosku cukup selalu aktif bermain di mini toto dan bosku akan berkesempatan menangkan hadiah handphone nya yg akan di umumkan di setiap bulan nya')">COPY</button>
+        </div>
+		
+		<div class="box">
+		<span>Nantinya akan di umumkan secara acak pemenang nya di setiap awal bulan, bagi pemenang akan di kirim pesan khusus dari pesan memo untuk claim ke wa, semoga bosku beruntung bisa menjadi pemenang nya ya</span>
+            <button class="copy-btn" onclick="copyText(this, 'nantinya akan di umumkan secara acak pemenang nya di setiap awal bulan, bagi pemenang akan di kirim pesan khusus dari pesan memo untuk claim ke wa, semoga bosku beruntung bisa menjadi pemenang nya ya')">COPY</button>
+        </div>
+		
+		<div class="box">
+		<span>Untuk pemenang HP GRATIS di umumkan di awal bulan tanggal 2 ya bosku</span>
+            <button class="copy-btn" onclick="copyText(this, 'untuk pemenang HP GRATIS di umumkan di awal bulan tanggal 2 ya bosku')">COPY</button>
+        </div>
+		
+		<div class="box">
+		<span>Untuk pemang lomba TURNOVER di umumkan di awal bulan tanggal 2 ya bosku, pemenangnya nanti dipilih berdasarkan pemain dengan turnover tertinggi dalam periode satu bulan</span>
+            <button class="copy-btn" onclick="copyText(this, 'untuk pemang lomba TURNOVER di umumkan di awal bulan tanggal 2 ya bosku, pemenangnya nanti dipilih berdasarkan pemain dengan turnover tertinggi dalam periode satu bulan')">COPY</button>
+        </div>
+		
+    </div>
+	
+
+    <!-- NOTE PAD 2 -->
+    <div class="note-pad">
+        <div class="note-title">GANGGUAN QRIS</div>
+
+        <div class="box">
+            <span>Saat ini QRIS sedikit delay ya bosku,mohon ditunggu ya bosku nanti saldo akan masuk otomatis</span>
+            <button class="copy-btn" onclick="copyText(this, 'saat ini QRIS sedikit delay ya bosku,mohon ditunggu ya bosku nanti saldo akan masuk otomatis')">COPY</button>
+        </div>
+		
+		<div class="box">
+            <span>Saat ini QRIS sedang gangguan ya bosku, sementara bosku bisa deposit ke bank BCA dulu</span>
+            <button class="copy-btn" onclick="copyText(this, 'saat ini QRIS sedang gangguan ya bosku, untuk sementara bosku bisa deposit ke bank BCA dulu ya')">COPY</button>
+        </div>
+		
+		<div class="box">
+            <span>Deposit anda masih dalam proses team vendor ya bosku, ditunggu ya bosku</span>
+            <button class="copy-btn" onclick="copyText(this, 'deposit anda masih dalam proses team vendor ya bosku, ditunggu ya bosku')">COPY</button>
+        </div>
+		
+		<div class="box">
+            <span>Dibuka detail transaksinya bosku kemudian potokan bukti detail berhasil transfer yang ada kode RRN QRIS nya bosku</span>
+            <button class="copy-btn" onclick="copyText(this, 'dibuka detail transaksinya bosku kemudian potokan bukti detail berhasil transfer yang ada kode RRN QRIS nya bosku')">COPY</button>
+        </div>
+
+        <div class="box">
+            <span>Mohon bersabar menunggu bosku apabila sudah ada dana masuk ke QRIS kami, saldo akan masuk ke akun bosku nanti ya</span>
+            <button class="copy-btn" onclick="copyText(this, 'mohon bersabar menunggu bosku apabila sudah ada dana masuk ke QRIS kami, saldo akan masuk ke akun bosku nanti ya')">COPY</button>
+        </div>
+
+        <div class="box">
+            <span>Estimasi waktu belum bisa kami pastikan ya bos jika sudah selesai dan saldo sukses masuk ke qris kami, maka akan diproseskan langsung ya bosku</span>
+            <button class="copy-btn" onclick="copyText(this, 'estimasi waktu belum bisa kami pastikan ya bos jika sudah selesai dan saldo sukses masuk ke qris kami, maka akan diproseskan langsung ya bosku')">COPY</button>
+        </div>
+		
+		<div class="note-title">GANGGUAN GAME & UMUM</div>
+		<div class="box">
+            <span>Untuk Provider PG Soft sementara sedang ada gangguan dari pusat ya bosku, sementara bosku bisa coba main game yang lagi gacor di pragmatic dulu ya sambil menunggu pg soft normal kembali</span>
+            <button class="copy-btn" onclick="copyText(this, 'Untuk Provider PG Soft sementara sedang ada gangguan dari pusat ya bosku, sementara bosku bisa coba main game yang lagi gacor di pragmatic dulu ya sambil menunggu pg soft normal kembali')">COPY</button>
+        </div>
+	
+		
+		<div class="box">
+            <span>Untuk kendala tersebut saat ini masih dalam pengecekan lebih lanjut dari pusat ya bosku, ditunggu normal ya bosku</span>
+            <button class="copy-btn" onclick="copyText(this, 'untuk kendala tersebut saat ini masih dalam pengecekan lebih lanjut dari pusat ya bosku, ditunggu normal ya bosku')">COPY</button>
+        </div>
+		
+		<div class="box">
+            <span>Estimasi belum dapat dipastikan ya bosku, secepatnya akan di usahakan mohon bersabar menunggu ya bosku</span>
+            <button class="copy-btn" onclick="copyText(this, 'estimasi belum dapat dipastikan ya bosku, secepatnya akan di usahakan mohon bersabar menunggu ya bosku')">COPY</button>
+        </div>
+		
+		
+		<div class="note-title">GANGGUAN WD</div>
+		
+		<div class="box">
+            <span>Bosku WD sudah dikirimkan namun ada kendala dari bank yang menyebabkan pending, ditunggu dan dicek secara berkala ya bosku nanti pasti masuk</span>
+            <button class="copy-btn" onclick="copyText(this, 'bosku WD sudah dikirimkan namun ada kendala dari bank yang menyebabkan pending, ditunggu dan dicek secara berkala ya bosku nanti pasti masuk')">COPY</button>
+        </div>
+		
+		<div class="box">
+            <span>Saat ini bank bca sedang gangguan ya bosku, untuk wd ewallet kami proseskan wdnya pakai bank bca, ditunggu normal ya bosku kalau sudah normal pasti akan diproseskan</span>
+            <button class="copy-btn" onclick="copyText(this, 'saat ini bank bca sedang gangguan ya bosku, untuk wd ewallet kami proseskan wdnya pakai bank bca, ditunggu normal ya bosku kalau sudah normal pasti akan diproseskan')">COPY</button>
+        </div>
+		
+		<div class="box">
+            <span>Saat ini sedang gangguan bankya bosku, ditunggu normal ya bosku</span>
+            <button class="copy-btn" onclick="copyText(this, 'saat ini sedang gangguan bankya bosku, ditunggu normal ya bosku')">COPY</button>
+        </div>
+		
+		<div class="box">
+            <span>Berasabar menunggu ya bosku, jika sudah normal maka nanti akan langsung di proseskan ditunggu normal bosku</span>
+            <button class="copy-btn" onclick="copyText(this, 'berasabar menunggu ya bosku, jika sudah normal maka nanti akan langsung di proseskan ditunggu normal bosku')">COPY</button>
+        </div>
+		
+		<div class="box">
+            <span>Untuk wd diluar bank BCA, BRI, BNI, MANDIRI dikenakan biaya ADM bank 6,500 karena wdnya kami proses antar bank ya bosku</span>
+            <button class="copy-btn" onclick="copyText(this, 'untuk wd diluar bank BCA, BRI, BNI, MANDIRI dikenakan biaya ADM bank 6,500 karena wdnya kami proses antar bank ya bosku')">COPY</button>
+        </div>
+		
+		<div class="note-title">GANGGUAN DEPO</div>
+		
+		<div class="box">
+            <span>Maaf untuk deposit pulsa saat ini kita tidak tersedia ya bosku, silakan deposit ke qris atau ke bank dulu ya</span>
+            <button class="copy-btn" onclick="copyText(this, 'maaf untuk deposit pulsa saat ini kita tidak tersedia ya bosku, silakan deposit ke qris atau ke bank dulu ya')">COPY</button>
+        </div>
+		
+		<div class="box">
+            <span>Id bosku kedapatan isi form deposit kosong, silakan deposit dulu yang benar untuk membuka akunnya kembali ya</span>
+            <button class="copy-btn" onclick="copyText(this, 'id bosku kedapatan isi form deposit kosong, silakan deposit dulu yang benar untuk membuka akunnya kembali ya')">COPY</button>
+        </div>
+		
+		<div class="box">
+            <span>Pastikan berhasil transfer dulu ya bosku, bosku bisa tunggu sampai berhasil statusnya maka nanti saldonya akan masuk</span>
+            <button class="copy-btn" onclick="copyText(this, 'pastikan berhasil transfer dulu ya bosku, bosku bisa tunggu sampai berhasil statusnya maka nanti saldonya akan masuk')">COPY</button>
+        </div>
+		
+		<div class="box">
+            <span>Kalau belum keluar bukti transfernya berarti masih pending bosku ditunggu saja bosku, kalau berhasil nanti saldo akan masuk otomatis ke akun bosku</span>
+            <button class="copy-btn" onclick="copyText(this, 'kalau belum keluar bukti transfernya berarti masih pending bosku ditunggu saja bosku, kalau berhasil nanti saldo akan masuk otomatis ke akun bosku')">COPY</button>
+        </div>
+		
+		<div class="menu-togel">
+    <button type="button" class="menu-btn"
+            onclick="openBuktiTransfer()">
+        📄 CEK BUKTI TRANSFER
+    </button>
+</div>
+		
+		<div class="box">
+            <span>Itu kendala gangguan dari banknya bosku, ditunggu saja sampai keluar bukti berhasil transfernya, biasanya kalau seperti itu nanti saldonya akan mental dan kembali ke rekening bosku</span>
+            <button class="copy-btn" onclick="copyText(this, 'itu kendala gangguan dari banknya bosku, ditunggu saja sampai keluar bukti berhasil transfernya, biasanya kalau seperti itu nanti saldonya akan mental dan kembali ke rekening bosku')">COPY</button>
+        </div>
+		
+		<div class="box">
+            <span>Kami cekkan transaksi dengan kode dan nama toko tersebut tidak ada masuk ke qris kami ya bosku, jadi bosku bisa ajukan refund saja terkait transaksi tersebut ke pihak dana ya</span>
+            <button class="copy-btn" onclick="copyText(this, 'kami cekkan transaksi dengan kode dan nama toko tersebut tidak ada masuk ke qris kami ya bosku, jadi bosku bisa ajukan refund saja terkait transaksi tersebut ke pihak dana ya')">COPY</button>
+        </div>
+	
+		<div class="box">
+            <span>Untuk pengajuan refund bosku bisa menghubungi layanan pelanggan DANA melalui telpon nomor 1500 445 atau kirim email ke help@dana.id</span>
+            <button class="copy-btn" onclick="copyText(this, 'untuk pengajuan refund bosku bisa menghubungi layanan pelanggan DANA melalui telpon nomor 1500 445 atau kirim email ke help@dana.id')">COPY</button>
+        </div>	
+		
+    </div>
+
+    <!-- NOTE PAD 3 -->
+    <div class="note-pad">
+        <div class="note-title">KENDALA UMUM</div>
+		<div class="box">
+            <span>Hapus history dan data cache browsernya terlebih dahulu supaya lancar bosku, kemudian coba login ulang pakai link ini ya https://gesya.me/mnttutama</span>
+            <button class="copy-btn" onclick="copyText(this, 'hapus history dan data cache browsernya terlebih dahulu supaya lancar bosku, kemudian coba login ulang pakai link ini ya https://gesya.me/mnttutama')">COPY</button>
+        </div>
+		
+		<div class="box">
+            <span>Buka aplikasi Google Chrome, tekan titik tiga (⋮) di sudut kanan atas layar  kemudian pilih histori dan cache lalu tekan tombol hapus data</span>
+            <button class="copy-btn" onclick="copyText(this, 'buka aplikasi Google Chrome, tekan titik tiga (⋮) di sudut kanan atas layar  kemudian pilih histori dan cache lalu tekan tombol hapus data')">COPY</button>
+        </div>
+		
+		<div class="note-title">KENDALA REKENING</div>
+		<div class="box">
+            <span>Nomor rekening yang anda daftarkan disitus kami tidak valid bosku,bisa di bantu nomor rekening dan nama rekening yang benar bosku? </span>
+            <button class="copy-btn" onclick="copyText(this, 'nomor rekening yang anda daftarkan disitus kami tidak valid bosku,bisa di bantu nomor rekening dan nama rekening yang benar bosku?')">COPY</button>
+        </div>
+		
+		<div class="box">
+            <span>Dicekkan rekeningnya sudah terdaftar di id lain ya bosku, berikan rekening bank lain yang belum pernah bos daftarkan biar bisa di perbaiki </span>
+            <button class="copy-btn" onclick="copyText(this, 'dicekkan rekeningnya sudah terdaftar di id lain ya bosku, berikan rekening bank lain yang belum pernah bos daftarkan biar bisa di perbaiki')">COPY</button>
+        </div>
+		
+		<div class="box">
+            <span>Dibantu potokan akun dananya bosku, fotokan bagian yang ada kelihatan nama dan nomor rekeningnya bosku</span>
+            <button class="copy-btn" onclick="copyText(this, 'dibantu potokan akun dananya bosku, fotokan bagian yang ada kelihatan nama dan nomor rekeningnya bosku')">COPY</button>
+        </div>
+		
+		<div class="box">
+            <span>Dibantu potokan rekeningnya bosku, fotokan bagian yang ada kelihatan nama dan nomor rekeningnya bosku</span>
+            <button class="copy-btn" onclick="copyText(this, 'dibantu potokan rekeningnya bosku, fotokan bagian yang ada kelihatan nama dan nomor rekeningnya bosku')">COPY</button>
+        </div>
+		
+		<div class="menu-togel">
+    <button type="button" class="menu-btn" onclick="openBankEwallet('bank')">
+        🏦 BANK
+    </button>
+
+    <button type="button" class="menu-btn" onclick="openBankEwallet('ewallet')">
+        💳 EWALLET
+    </button>
+</div>
+		
+		<div class="box">
+            <span>Silakan login kembali dan isi ulang form withdrawnya bosku</span>
+            <button class="copy-btn" onclick="copyText(this, 'silakan login kembali dan isi ulang form withdrawnya bosku')">COPY</button>
+        </div>
+		
+		
+		<div class="note-title">GANTI REKENING</div>
+
+        <div class="box">
+            <span>Ada kendala apa dengan rekening bosku  yang terdaftar ya?</span>
+            <button class="copy-btn" onclick="copyText(this, 'ada kendala apa dengan rekening bosku  yang terdaftar ya?')">COPY</button>
+        </div>
+
+        <div class="box">
+            <span>Pergantian rekening wajib atas nama pemilik yang sama ya bosku, dibantu nama dan nomor yang lama dan rekening penggantinya bosku</span>
+            <button class="copy-btn" onclick="copyText(this, 'pergantian rekening wajib atas nama pemilik yang sama ya bosku, dibantu nama dan nomor yang lama dan rekening penggantinya bosku')">COPY</button>
+        </div>
+
+		<div class="box">
+            <span>Untuk pergantian rekening bank hanya bisa diganti ke sesama bank ya bosku, tidak bisa ke ewallet</span>
+            <button class="copy-btn" onclick="copyText(this, 'untuk pergantian rekening bank hanya bisa diganti ke sesama bank ya bosku, tidak bisa ke ewallet')">COPY</button>
+        </div>
+
+        <div class="box">
+            <span>Untuk verifikasi pergantian rekeningnya dibantu potokan KTP nya bosku</span>
+            <button class="copy-btn" onclick="copyText(this, 'untuk verifikasi pergantian rekeningnya dibantu potokan KTP nya bosku')">COPY</button>
+        </div>
+
+		<div class="note-title">BELUM PREMIUM</div>
+
+        <div class="box">
+            <span>Rekening bosku belum premium ya, silakan di premiumkan dulu supaya wd nya bisa di proseskan bosku</span>
+            <button class="copy-btn" onclick="copyText(this, 'rekening bosku belum premium ya, silakan di premiumkan dulu supaya wd nya bisa di proseskan bosku')">COPY</button>
+        </div>
+
+        <div class="box">
+            <span>Silakan di premiumkan dulu ya bosku, nanti setelah premium akunnya bisa login kembali dan wdnya bisa di proseskan juga</span>
+            <button class="copy-btn" onclick="copyText(this, 'silakan di premiumkan dulu ya bosku, nanti setelah premium akunnya bisa login kembali dan wdnya bisa di proseskan juga')">COPY</button>
+        </div>
+		
+		<div class="box">
+            <span>Kalau bosku belum ada ktp, bosku bisa premiumkan pakai ktp keluarga/kerabat bosku, silakan di premiumkan dulu</span>
+            <button class="copy-btn" onclick="copyText(this, 'kalau bosku belum ada ktp, bosku bisa premiumkan pakai ktp keluarga/kerabat bosku, silakan di premiumkan dulu')">COPY</button>
+        </div>
+		
+		
+		<div class="note-title">DANA LIMIT</div>
+		
+		<div class="box">
+            <span>Rekening bosku limit ya, solusinya ganti rekening supaya wdnya bisa di proseskan</span>
+            <button class="copy-btn" onclick="copyText(this, 'rekening bosku limit ya, solusinya ganti rekening supaya wdnya bisa di proseskan')">COPY</button>
+        </div>
+		
+		<div class="box">
+            <span>Berikan rekening bank lain dengan  nama pemilik yang sama supaya bisa diperbaiki rekeningnya dan wd bosku bisa di proseskan</span>
+            <button class="copy-btn" onclick="copyText(this, 'berikan rekening bank lain dengan  nama pemilik yang sama supaya bisa diperbaiki rekeningnya dan wd bosku bisa di proseskan')">COPY</button>
+        </div>
+		
+		<div class="box">
+            <span>Bosku bisa buat dulu rekening bank seperti seabank,neobank atau bank jago pakai ktp atas nama yang sama ya</span>
+            <button class="copy-btn" onclick="copyText(this, 'bosku bisa buat dulu rekening bank seperti seabank,neobank atau bank jago pakai ktp atas nama yang sama ya')">COPY</button>
+        </div>
+		
+		<div class="note-title">WHATSAPP</div>
+		
+			<div class="box">
+            <span>🟢 WA HADIAH HP & TO</span>
+            <button class="copy-btn" onclick="copyText(this, 'silakan lanjut konfirmasi di whatsapp untuk pengambilan hadiahnya ya bosku https://wa.me/+6281937813893')">COPY</button>
+        </div>
+			
+			<div class="box">
+            <span>🟢 WA VERIF TOGEL</span>
+            <button class="copy-btn" onclick="copyText(this, 'silakan lanjut konfirmasi di whatsapp untuk melanjutkan proses wd-nya ya bosku https://wa.me/+6281957154445')">COPY</button>
+        </div>
+		
+			<div class="box">
+            <span>🟢 WA INVEST</span>
+            <button class="copy-btn" onclick="copyText(this, 'silakan lanjut konfirmasi di whatsapp untuk membuka akunnya kembali ya bosku https://wa.me/+6287744258298')">COPY</button>
+        </div>
+		
+			<div class="box">
+            <span>🟢 WA FREESPIN</span>
+            <button class="copy-btn" onclick="copyText(this, 'silakan lanjut konfirmasi di whatsapp untuk claim hadiah freespin ya bosku https://wa.me/+6287744258298')">COPY</button>
+        </div>
+		
+			<div class="box">
+            <span>🟢 WA BAJU</span>
+            <button class="copy-btn" onclick="copyText(this, 'silakan lanjut konfirmasi di whatsapp untuk pengisian form pengiriman bajunya ya bosku https://wa.me/+6287818614423')">COPY</button>
+        </div>
+		
+		<div class="note-title">TOGEL </div>
+		<div class="box">
+
+    <span style="white-space: pre-line;">Peraturan Batas Pasang Togel BBFS (BB campuran) dan Angka Tarung Maksimal 5 Digit ya bosku
+Untuk batas line sebagai berikut:
+4D 625 line
+3D 150 line
+2D 20 line
+    </span>
+
+    <button class="copy-btn"
+    onclick="copyText(this, `Peraturan Batas Pasang Togel BBFS (BB campuran) dan Angka Tarung Maksimal 5 Digit ya bosku
+Untuk batas line sebagai berikut:
+4D 625 line
+3D 150 line
+2D 20 line`)">
+    COPY
+    </button>
+
+</div>
+<div class="menu-togel">
+    <button type="button" class="menu-btn"
+onclick="openModal('jadwalModal')">
+    📅 JADWAL
+</button>
+
+    <button type="button" class="menu-btn hadiah-btn"
+onclick="openModal('hadiahModal')">
+    🎁 HADIAH
+</button>
+</div>
+
+</div>
+
+
+    <!-- NOTE PAD 4 -->
+    <div class="note-pad">
+        <div class="note-title">RUNGKAT</div>
+		
+		<div class="box">
+            <span>Apabila permainan yang bosku mainkan barusan belum hoki, boleh dicoba di permainan lainnya ya bosku</span>
+            <button class="copy-btn" onclick="copyText(this, 'apabila permainan yang bosku mainkan barusan belum hoki, boleh dicoba di permainan lainnya ya bosku')">COPY</button>
+        </div>
+		
+        <div class="box">
+            <span>Jangan dipaksakan main di satu game kalau belum beruntung ya bosku</span>
+            <button class="copy-btn" onclick="copyText(this, 'jangan dipaksakan main di satu game kalau belum beruntung ya bosku')">COPY</button>
+        </div>
+
+        <div class="box">
+            <span>Silahkan dicoba bosku semoga mendapatkan jp maxwin seperti member minitoto lainnya ya</span>
+            <button class="copy-btn" onclick="copyText(this, 'silahkan dicoba bosku semoga mendapatkan jp maxwin seperti member minitoto lainnya ya')">COPY</button>
+        </div>
+
+        <div class="box">
+            <span>Boleh dicoba dulu ya bosku, siapa tahu hari ini rezeki bosku bagus di game yang kami sarankan</span>
+            <button class="copy-btn" onclick="copyText(this, 'boleh dicoba dulu ya bosku, siapa tahu hari ini rezeki bosku bagus di game yang kami sarankan')">COPY</button>
+        </div>
+
+        <div class="box">
+            <span>Di coba saran dari kami ya bosku,sudah banyak member kita yang profit dan wd di permainan tersebut, semoga bosku juga hoki</span>
+            <button class="copy-btn" onclick="copyText(this, 'di coba saran dari kami ya bosku,sudah banyak member kita yang profit dan wd di permainan tersebut, semoga bosku juga hoki')">COPY</button>
+        </div>
+
+        <div class="box">
+            <span>Dicoba mainnya pelan-pelan dulu bosku, semoga setelah bosku mainkan lagi bisa wd ya</span>
+            <button class="copy-btn" onclick="copyText(this, 'dicoba mainnya pelan-pelan dulu bosku, semoga setelah bosku mainkan lagi bisa wd ya')">COPY</button>
+        </div>
+
+        <div class="box">
+            <span>Dicoba dulu ya bosku, kalau belum dicoba bagaimana bisa tahu hasilnya, bisa jadi setelah bos coba bisa jp</span>
+            <button class="copy-btn" onclick="copyText(this, 'dicoba dulu ya bosku, kalau belum dicoba bagaimana bisa tahu hasilnya, bisa jadi setelah bos coba bisa jp')">COPY</button>
+        </div>
+		
+		<div class="box">
+            <span>Dimainkan lagi saran permainan dari kami bosku, mudah-mudahan tembus scatter JP ya </span>
+            <button class="copy-btn" onclick="copyText(this, 'dimainkan lagi saran permainan dari kami bosku, mudah-mudahan tembus scatter JP ya ')">COPY</button>
+        </div>
+		
+		<div class="box">
+            <span>Pasti bisa dimenangkan selagi bosku tidak menyerah bosku pasti bisa jp juga seperti member lainnya</span>
+            <button class="copy-btn" onclick="copyText(this, 'pasti bisa dimenangkan selagi bosku tidak menyerah bosku pasti bisa jp juga seperti member lainnya')">COPY</button>
+        </div>
+		<div class="box">
+            <span>Tidak ada kemenangan yang mustahil bosku raih selagi bosku tidak patah semangat dan kembali mencoba ya</span>
+            <button class="copy-btn" onclick="copyText(this, 'tidak ada kemenangan yang mustahil bosku raih selagi bosku tidak patah semangat dan kembali mencoba ya')">COPY</button>
+        </div>
+		
+		<div class="box">
+            <span>Dibalik kekalahan pasti ada kemenangan yang tidak terduga ya bosku, dicoba kembali ya bosku</span>
+            <button class="copy-btn" onclick="copyText(this, 'dibalik kekalahan pasti ada kemenangan yang tidak terduga ya bosku, dicoba kembali ya bosku')">COPY</button>
+        </div>
+		
+		<div class="box">
+            <span>Dicoba kembali ya bosku, mudah-mudahan setelah bosku mainkan bisa menang dan wd ya</span>
+            <button class="copy-btn" onclick="copyText(this, 'dicoba kembali ya bosku, mudah-mudahan setelah bosku mainkan bisa menang dan wd ya')">COPY</button>
+        </div>
+		
+		<div class="box">
+            <span>Bosku harus yakin dan optimis kalau bosku akan mendapatkan kemenangan jp sesuai dengan apa yg bosku harapkan</span>
+            <button class="copy-btn" onclick="copyText(this, 'bosku harus yakin dan optimis kalau bosku akan mendapatkan kemenangan jp sesuai dengan apa yg bosku harapkan')">COPY</button>
+        </div>
+		
+		<div class="box">
+            <span>Jangan langsung pesimis dulu bosku, mudah-mudahan di game yang kami sarankan bosku bisa menang dan wd ya</span>
+            <button class="copy-btn" onclick="copyText(this, 'jangan langsung pesimis dulu bosku, mudah-mudahan di game yang kami sarankan bosku bisa menang dan wd ya')">COPY</button>
+        </div>
+		
+		<div class="box">
+            <span>Coba bermain lebih tenang lagi bosku, sudah banyak kok member kita yang jp dan wd karna usaha dan kegigihan mereka yang tidak patah semangat </span>
+            <button class="copy-btn" onclick="copyText(this, 'coba bermain lebih tenang lagi bosku, sudah banyak kok member kita yang jp dan wd karna usaha dan kegigihan mereka yang tidak patah semangat ')">COPY</button>
+        </div>
+		
+		<div class="box">
+            <span>Coba lagi ya bosku jangan langsung menyerah masih banyak peluang menang bosku</span>
+            <button class="copy-btn" onclick="copyText(this, 'coba lagi ya bosku jangan langsung menyerah masih banyak peluang menang bosku')">COPY</button>
+        </div>
+		
+		<div class="box">
+            <span>Dalam permainan pasti ada menang ada kalah nya yah bosku, masih ada beribu kesempatan untuk mendapatkan kemenangan tersebut, tetap semangat yah bosku</span>
+            <button class="copy-btn" onclick="copyText(this, 'dalam permainan pasti ada menang ada kalah nya yah bosku, masih ada beribu kesempatan untuk mendapatkan kemenangan tersebut, tetap semangat yah bosku')">COPY</button>
+        </div>
+		
+		<div class="box">
+            <span>Coba kembali ya bosku kemenangan di dapat dari usaha member yg pantang menyerah dan kembali mencoba</span>
+            <button class="copy-btn" onclick="copyText(this, 'coba kembali ya bosku kemenangan di dapat dari usaha member yg pantang menyerah dan kembali mencoba')">COPY</button>
+        </div>
+		
+		<div class="box">
+            <span>Bosku, kalau soal JP, nggak ada yang tahu pasti. Kadang datang pas iseng main, kadang pas hampir menyerah. Intinya tetap sabar dan semangat ya.</span>
+            <button class="copy-btn" onclick="copyText(this, 'bossku, kalau soal JP, nggak ada yang tahu pasti. Kadang datang pas iseng main, kadang pas hampir menyerah. Intinya tetap sabar dan semangat ya.')">COPY</button>
+        </div>
+		
+		<div class="box">
+            <span>Bosku, kadang memang hasil belum sesuai harapan. Tapi semua game di sini real dan fair play. Semoga di next spin bossku lebih hoki, tetap semangat ya </span>
+            <button class="copy-btn" onclick="copyText(this, 'bossku, kadang memang hasil belum sesuai harapan. Tapi semua game di sini real dan fair play. Semoga di next spin bossku lebih hoki, tetap semangat ya ')">COPY</button>
+        </div>
+		
+		<div class="box">
+            <span>Sampaikan kendalanya dengan tidak berkata kasar dan dimohon tidak melakukan spam pesan chatt ya bosku</span>
+            <button class="copy-btn" onclick="copyText(this, 'sampaikan kendalanya dengan tidak berkata kasar dan dimohon tidak melakukan spam pesan chatt ya bosku')">COPY</button>
+        </div>
+		
+		<div class="box">
+            <span>Jika masih ada yang ingin disampaikan silakan lanjut obrolan di whatsapp minitoto ya bosku</span>
+            <button class="copy-btn" onclick="copyText(this, 'jika masih ada yang ingin disampaikan silakan lanjut obrolan di whatsapp minitoto ya bosku')">COPY</button>
+        </div>
+		
+		<div class="menu-togel">
+    <button type="button" class="menu-btn"
+onclick="openModal('ListLinkModal')">
+    🔗 LINK AKTIF
+</button>
+		
+    </div>
+	
+	<div class="note-title">PROMOSI </div>
+		<div class="box">
+
+    <span style="white-space: pre-line;">🎁 MINITOTO BAGI-BAGI 10 HP GRATIS SETIAP BULAN!
+    </span>
+
+    <button class="copy-btn"
+    onclick="copyText(this, `🎁 MINITOTO BAGI-BAGI 10 HP GRATIS SETIAP BULAN!
+Tanpa biaya, tanpa syarat ribet!
+
+📲 Cukup jadi member aktif, dan otomatis ikut undian!
+🎯 Semua punya peluang yang sama, bosku!
+🎯 Pemenang akan dipilih secara acak (random) di antara semua member aktif, jadi semua punya peluang yang sama, bosku!
+
+Terus main & aktif, siapa tahu bosku yang beruntung bulan ini! 🍀`)">
+    COPY
+    </button>
+
+</div>
+	
+</div>
+
+<script>
+
+function copyText(button, text){
+
+    navigator.clipboard.writeText(text);
+
+    let originalText = button.innerText;
+
+    button.innerText = "✔";
+    button.classList.add("copied");
+
+    setTimeout(() => {
+        button.innerText = originalText;
+        button.classList.remove("copied");
+    }, 1500);
+
+}
+</script>
+
+<script>
+function openModal(id){
+    document.getElementById(id).style.display = "flex";
+}
+
+function closeModal(id){
+    document.getElementById(id).style.display = "none";
+}
+
+window.onclick = function(e){
+    if(e.target.classList.contains("modal")){
+        e.target.style.display = "none";
+    }
+}
+</script>
+
+<script>
+
+function openBankEwallet(type){
+
+    const modal = document.getElementById("bankEwalletModal");
+    const list = document.getElementById("beList");
+    const title = document.getElementById("beTitle");
+
+    list.innerHTML = "";
+
+    if(type === "bank"){
+
+        title.innerText = "🏦 PILIH BANK";
+
+        const banks = [
+            {name:"SEABANK", gambar:"poto/seabank.png"},
+            {name:"BANKJAGO", gambar:"poto/bankjago.png"},
+            {name:"NEOBANK", gambar:"poto/neobank.png"},
+            {name:"SUPERBANK", gambar:"poto/superbank.png"},
+            {name:"ALLOBANK", gambar:"poto/allobank.png"}
+        ];
+
+        banks.forEach(bank=>{
+
+            list.innerHTML += `
+                <div class="be-item"
+                     onclick="showBankImage('${bank.name}','${bank.gambar}','bank')">
+                    🏦 ${bank.name}
+                </div>
+            `;
+
+        });
+
+    }
+
+    if(type === "ewallet"){
+
+        title.innerText = "💳 PILIH EWALLET";
+
+        const wallets = [
+            {name:"DANA", gambar:"poto/dana.png"},
+            {name:"OVO", gambar:"poto/ovo.png"},
+            {name:"GOPAY", gambar:"poto/gopay.png"},
+            {name:"LINKAJA", gambar:"poto/linkaja.png"},
+            {name:"SHOPEEPAY", gambar:"poto/shopeepay.png"}
+        ];
+
+        wallets.forEach(wallet=>{
+
+            list.innerHTML += `
+                <div class="be-item"
+                     onclick="showBankImage('${wallet.name}','${wallet.gambar}','ewallet')">
+                    💳 ${wallet.name}
+                </div>
+            `;
+
+        });
+
+    }
+
+    modal.style.display = "flex";
+}
+
+function showBankImage(nama, gambar, type){
+
+    document.getElementById("beTitle").innerText = nama;
+
+    document.getElementById("beList").innerHTML = `
+        <div class="bank-preview">
+
+            <button class="back-btn"
+                    onclick="openBankEwallet('${type}')">
+                ⬅ Kembali
+            </button>
+
+            <img src="${gambar}" alt="${nama}">
+
+        </div>
+    `;
+}
+
+</script>
+
+<script>
+
+function openBuktiTransfer(){
+
+    const modal = document.getElementById("buktiTransferModal");
+    const list = document.getElementById("btList");
+
+    document.getElementById("btTitle").innerText =
+        "📄 PILIH BUKTI TRANSFER";
+
+    const data = [
+        {name:"BCA", gambar:"bukti/bca.png"},
+        {name:"BRI", gambar:"bukti/bri.png"},
+        {name:"BNI", gambar:"bukti/bni.png"},
+        {name:"MANDIRI", gambar:"bukti/mandiri.png"},
+        {name:"DANA", gambar:"bukti/dana.png"},
+        {name:"OVO", gambar:"bukti/ovo.png"},
+        {name:"GOPAY", gambar:"bukti/gopay.png"},
+        {name:"LINKAJA", gambar:"bukti/linkaja.png"},
+        {name:"SHOPEEPAY", gambar:"bukti/shopeepay.png"}
+    ];
+
+    list.innerHTML = "";
+
+    data.forEach(item => {
+
+        list.innerHTML += `
+            <div class="be-item"
+                 onclick="showBuktiTransfer(
+                    '${item.name}',
+                    '${item.gambar}'
+                 )">
+
+                📄 ${item.name}
+
+            </div>
+        `;
+
+    });
+
+    modal.style.display = "flex";
+}
+
+function showBuktiTransfer(nama, gambar){
+
+    document.getElementById("btTitle").innerText = nama;
+
+    document.getElementById("btList").innerHTML = `
+        <div class="bank-preview">
+
+            <button class="back-btn"
+                    onclick="openBuktiTransfer()">
+                ⬅ Kembali
+            </button>
+
+            <img src="${gambar}" alt="${nama}">
+
+        </div>
+    `;
+}
+
+</script>
+
+<!-- POPUP FORM BAJU -->
+<div id="formBajuModal" class="modal">
+    <div class="modal-content">
+        <span class="close"
+              onclick="closeModal('formBajuModal')">&times;</span>
+
+        <h2>👕 FORM BAJU</h2>
+
+        <div class="modal-scroll">
+
+<pre id="formBajuText">Username:
+Nama:
+Nomor HP:
+Alamat:
+RT/RW:
+Kecamatan:
+Kabupaten:
+Provinsi:
+Kode Pos:
+Ukuran Baju:
+
+Patokan:
+Link Sharelok: </pre>
+
+<button class="copy-btn"
+onclick="copyText(this, document.getElementById('formBajuText').innerText)">
+COPY
+</button>
+
+        </div>
+    </div>
+</div>
+
+
+<!-- POPUP JADWAL -->
+<div id="jadwalModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('jadwalModal')">&times;</span>
+
+        <h2>📅 JADWAL TOGEL</h2>
+		<br>
+        <div class="modal-scroll">
+            <pre>
+📢 KENTUCKY MIDDAY ( SETIAP HARI )
+Tutup Pasaran : 00:01 WIB
+Result : 00:20 WIB
+www.kylottery.com
+
+📢 INDIANA MIDDAY ( SETIAP HARI )
+Tutup Pasaran : 00:10 WIB
+Result : 00:20 WIB
+www.hoosierlottery.com
+
+📢 TENNESSE MIDDAY ( SENIN OFF )
+Tutup Pasaran : 00:10 WIB
+Result : 00:20 WIB
+www.tnlottery.com
+
+📢 TEXAS DAY ( SENIN OFF )
+Tutup Pasaran : 00:20 WIB
+Result : 00:27 WIB
+www.texaslottery.com
+
+📢 FLORIDA MIDDAY ( SETIAP HARI )
+Tutup Pasaran : 00:20 WIB
+Result : 00:30 WIB
+www.flalottery.com
+
+📢 PENNSYLVANIA DAY ( SETIAP HARI )
+Tutup Pasaran : 00:15 WIB
+Result : 00:35 WIB
+www.palottery.state.pa.us
+
+📢 RHODE ISLAND ( SETIAP HARI )
+Tutup Pasaran : 00:20 WIB
+Result : 00:30 WIB
+www.rilot.com
+
+📢 ILLINOIS MIDDAY ( SETIAP HARI )
+Tutup Pasaran : 00:30 WIB
+Result : 00:40 WIB
+www.illinoislottery.com
+
+📢 MISSOURI MIDDAY ( SETIAP HARI )
+Tutup Pasaran : 00:35 WIB
+Result : 00:45 WIB
+www.molottery.com
+
+📢 WASHINGTON DC MIDDAY ( SETIAP HARI )
+Tutup Pasaran : 00:45 WIB
+Result : 00:55 WIB
+www.dclottery.com
+
+📢 DELAWARE DAY
+Tutup Pasaran : 00:45 WIB
+Result : 00:58 WIB
+www.delottery.com
+
+📢 VIRGINIA DAY ( SETIAP HARI )
+Tutup Pasaran : 00:45 WIB
+Result : 01:00 WIB
+www.valottery.com
+
+📢 NEW YORK MIDDAY ( SETIAP HARI )
+Tutup Pasaran : 01:15 WIB
+Result : 01:30 WIB
+www.nylottery.ny.gov
+
+📢 WISCONSIN (SETIAP HARI)
+Tutup Pasaran : 01:19 WIB
+Result : 01:29 WIB
+https://www.youtube.com/watch?v=IJFrE_pGQRM
+
+📢 FREETOWN ( Setiap Hari )
+JAM TUTUP : 02:10 WIB
+JAM RESULT : 02:30 WIB
+https://freetownpools.town/
+
+📢 CAROLINA DAY ( SETIAP HARI )
+Tutup Pasaran : 02:45 WIB
+Result : 03:00 WIB
+https://nclottery.com/Pick4
+
+📢 OREGON 1 ( SETIAP HARI )
+Tutup Pasaran : 02:45 WIB
+Result : 03:00 WIB
+www.oregonlottery.org
+
+📢 GERMANY POOLS ( SETIAP HARI )
+Tutup Pasaran : 04:15 WIB
+Result : 04:30 WIB
+www.germanypools.com
+
+📢 MOSKOW ( Setiap Hari )
+Tutup Pasaran : 04:40 WIB
+Result : 05:00 WIB
+https://moskowlotto.com/
+
+📢 PENNSYLVANIA EVENING ( SETIAP HARI )
+Tutup Pasaran : 05:45 WIB
+Result : 05:58 WIB
+www.palottery.state.pa.us
+
+📢 OREGON 2 ( SETIAP HARI )
+Tutup Pasaran : 05:45 WIB
+Result : 06:00 WIB
+www.oregonlottery.org
+
+📢 TEXAS EVENING ( SENIN OFF )
+Tutup Pasaran : 05:50 WIB
+Result : 06:00 WIB
+www.texaslottery.com
+
+📢 GEORGIA EVENING ( SETIAP HARI )
+Tutup Pasaran : 05:50 WIB
+Result : 06:00 WIB
+www.wsbtv.com
+
+📢 TENNESSE EVENNING ( SETIAP HARI )
+Tutup Pasaran : 06:10 WIB
+Result : 06:20 WIB
+www.tnlottery.com
+
+📢 MICHIGAN EVENING ( SETIAP HARI )
+Tutup Pasaran : 06:20 WIB
+Result : 06:29 WIB
+www.michiganlottery.com
+
+📢 OHIO EVENING ( SETIAP HARI )
+Tutup Pasaran : 06:20 WIB
+Result : 06:29 WIB
+https://www.youtube.com/user/OHdailydraws/videos
+
+📢 KINGSTON ( Setiap Hari )
+JAM TUTUP : 06:20 WIB
+JAM RESULT : 06:50 WIB
+Link : https://kingstonlotteries.com
+
+📢 MARYLAND EVENING ( SETIAP HARI )
+Tutup Pasaran : 06:45 WIB
+Result : 06:55 WIB
+www.mdlottery.com
+
+📢 WASHINGTON DC EVENING ( SETIAP HARI )
+Tutup Pasaran : 06:45 WIB
+Result : 06:57 WIB
+www.dclottery.com
+
+📢 DELAWARE NIGHT ( SETIAP HARI )
+Tutup Pasaran : 06:45 WIB
+Result : 06:57 WIB
+www.delottery.com
+
+📢 ATLANTA POOLS ( SETIAP HARI )
+Tutup Pasaran : 06:30 WIB
+Result : 07:00 WIB
+www.atlantapools.us
+
+📢 CALIFORNIA ( SETIAP HARI )
+Tutup Pasaran : 08:20 WIB
+Result : 08:30 WIB
+www.calottery.com/draw-games/daily-4
+
+📢 FLORIDA EVENING ( SETIAP HARI )
+Tutup Pasaran : 08:35 WIB
+Result : 08:45 WIB
+www.flalottery.com
+
+📢 MISSOURI EVENING ( SETIAP HARI )
+Tutup Pasaran : 08:45 WIB
+Result : 08:59 WIB
+www.molottery.com
+
+📢 OREGON 3 ( SETIAP HARI )
+Tutup Pasaran : 08:50 WIB
+Result : 09:00 WIB
+www.oregonlottery.org
+
+📢 ILLINOIS EVENING ( SETIAP HARI )
+Tutup Pasaran : 09:10 WIB
+Result : 09:22 WIB
+www.illinoislottery.com
+
+📢 NEW YORK EVENING ( SETIAP HARI )
+Tutup Pasaran : 09:15 WIB
+Result : 09:30 WIB
+www.nylottery.ny.gov
+
+📢 INDIANA EVENING ( SETIAP HARI )
+Tutup Pasaran : 09:40 WIB
+Result : 09:50 WIB
+www.hoosierlottery.com
+
+📢 NEW JERSEY EVENING ( SETIAP HARI )
+Tutup Pasaran : 09:45 WIB
+Result : 09:56 WIB
+www.njlottery.com
+
+📢 VIRGINIA NIGHT ( SETIAP HARI )
+Tutup Pasaran : 09:45 WIB
+Result : 10:00 WIB
+www.valottery.com
+
+📢 KENTUCKY EVENING ( SETIAP HARI )
+Tutup Pasaran : 09:45 WIB
+Result : 10:00 WIB
+www.kylottery.com
+
+📢 TEXAS NIGHT ( SENIN OFF )
+Tutup Pasaran : 10:00 WIB
+Result : 10:12 WIB
+www.texaslottery.com
+
+📢 NORTH CAROLINA EVENING
+Tutup Pasaran :10.10 WIB
+Result :10:20 WIB
+www.clottery.com/Pick4
+
+📢 GEORGIA NIGHT ( SETIAP HARI )
+Tutup Pasaran : 10:25 WIB
+Result : 10:34 WIB
+www.wsbtv.com
+
+📢 CAMBODIA ( SETIAP HARI )
+Tutup Pasaran : 11:30 WIB
+Result : 11:50 WIB
+www.magnumcambodia.com
+
+📢 OREGON 4 ( SETIAP HARI )
+Tutup Pasaran : 11:50 WIB
+Result : 12:00 WIB
+www.oregonlottery.org
+
+📢 BULLSEYE ( SETIAP HARI )
+Tutup Pasaran : 11:50 WIB
+Result : 12:10 WIB
+www.mylotto.co.nz/results/bullseye
+
+📢 LIMAPOOLS ( Setiap Hari )
+JAM TUTUP : 12:15 WIB
+JAM RESULT : 12:45 WIB
+Link : https://limapools.com/
+
+📢 TOTOMACAU ( SETIAP HARI 6X SEHARI )
+Tutup Pasaran : 13:00 WIB ( 15 MENIT SETELAH TUTUP RESULT )
+Tutup Pasaran : 16:00 WIB ( 15 MENIT SETELAH TUTUP RESULT )
+Tutup Pasaran : 19:00 WIB ( 15 MENIT SETELAH TUTUP RESULT )
+Tutup Pasaran : 22:00 WIB ( 15 MENIT SETELAH TUTUP RESULT )
+Tutup Pasaran : 23:00 WIB ( 15 MENIT SETELAH TUTUP RESULT )
+Tutup Pasaran : 00:01 WIB ( 15 MENIT SETELAH TUTUP RESULT )
+https://kick.com/live-ttm4d
+
+📢 TOTOMACAU 5D ( SETIAP HARI 2X SEHARI )
+Tutup Pasaran : 15:15 WIB ( 15 MENIT SETELAH TUTUP RESULT )
+Tutup Pasaran : 21:15 WIB ( 15 MENIT SETELAH TUTUP RESULT )
+https://kick.com/studio-live-game
+
+📢 SYDNEY LOTTO ( SETIAP HARI )
+Tutup Pasaran : 13:49 WIB
+Result : 14:00 WIB
+https://sydneylotto.today/
+Youtube Chanel : https://www.youtube.com/@SYDNEYLOTTOOFFICIAL1
+
+📢 NORTH KOREA ( SETIAP HARI )
+Tutup Pasaran : 14:45 WIB
+Result : 15:15 WIB
+northkoreapools.com
+
+📢 CHINA ( SETIAP HARI )
+Tutup Pasaran : 15:10 WIB
+Result : 15:30 WIB
+www.chinapools.asia
+
+📢 THAILAND ( SETIAP HARI )
+Tutup Pasaran : 16:35 WIB
+Result : 17:05 WIB
+www.thailandpools.asia
+
+📢 KING KONG POOLS ( SETIAP HARI 2X SEHARI )
+Tutup Pasaran : 16:59 WIB ( 1 MENIT SETELAH TUTUP RESULT )
+Tutup Pasaran : 23:29 WIB ( 1 MENIT SETELAH TUTUP RESULT )
+https://kingkongpools.id/
+
+📢 JEPANG / JAPAN ( SETIAP HARI )
+Tutup Pasaran : 16:50 WIB
+Result : 17:20 WIB
+www.japanpools.online
+
+📢 SINGAPORE POOLS ( SELASA & JUMAT OFFLINE )
+Tutup Pasaran : 17:15 WIB
+Result : 17:50 WIB
+www.singaporepools.com.sg
+
+📢 PHOENIX 4D ( SETIAP HARI )
+Tutup Pasaran : 18:30 WIB
+Result : 19:00 WIB
+www.livedrawphoenix.com
+
+📢 MONGOLIA ( SETIAP HARI )
+Tutup Pasaran : 19:00 WIB
+Result : 19:25 WIB
+www.Mongoliawinner.com
+
+📢 PORTLAND ( SETIAP HARI )
+Tutup Pasaran : 19:50 WIB
+Result : 20:20 WIB
+www.portlandpools.us
+
+📢 PCSO ( MINGGU OFFLINE )
+Tutup Pasaran : 19:45 WIB
+Result : 20:15 WIB
+www.pcso.gov.ph
+
+📢 TAIWAN ( SETIAP HARI )
+Tutup Pasaran : 20:30 WIB
+Result : 20:45 WIB
+www.taiwan-lotto.com
+
+📢 BUFFALO ( SETIAP HARI )
+Tutup Pasaran : 20:30 WIB
+Result : 21:00 WIB
+www.buffalo4d.com
+
+📢 TENNESSE MORNING ( MINGGU OFF )
+Tutup Pasaran : 21:10 WIB
+Result : 21:22 WIB
+www.tnlottery.com
+
+📢 BOGOTA LOTERY ( SETIAP HARI )
+Tutup Pasaran : 21:10 WIB
+Result : 21:40 WIB
+www.bogotaloteria.com
+
+📢 TEXAS MORNING ( MINGGU OFF )
+Tutup Pasaran : 21:50 WIB
+Result : 22:00 WIB
+www.texaslottery.com
+
+📢 OSLO POOLS ( Setiap Hari )
+Jam Tutup : 22:10 WIB
+Jam Result : 22:30 WIB
+Link Result : https://oslopools4d.com/
+
+📢 MUNCHEN LOTTERY ( Setiap Hari )
+Tutup Pasaran : 22:15 WIB
+Result : 22:45 WIB
+https://munchenlotteries.com/
+
+📢 HONGKONG LOTTO ( SETIAP HARI )
+Tutup Pasaran : 22:59 WIB
+Result : 23:00 WIB
+https://hongkonglotto.today/
+Youtube Chanel : https://www.youtube.com/@hngkonglotto/streams
+
+📢 JAKARTA POOLS ( SETIAP HARI )
+Tutup Pasaran : 23:30 WIB
+Result : 23:45 WIB
+https://kick.com/studio-live-game
+
+📢 BOSTON ( Setiap Hari )
+Tutup Pasaran : 23:20 WIB
+Result : 23:50 WIB
+https://bostonlotteries.com/
+
+📢 MARYLAND MIDDAY ( SETIAP HARI )
+Tutup Pasaran : 23:15 WIB
+Result : 23:28 WIB
+www.mdlottery.com
+
+📢 OHIO MIDDAY ( SETIAP HARI )
+Tutup Pasaran : 23:20 WIB
+Result : 23:29 WIB
+https://www.youtube.com/user/OHdailydraws/videos
+
+📢 GEORGIA MIDDAY ( SETIAP HARI )
+Tutup Pasaran : 23:20 WIB
+Result : 23:29 WIB
+www.wsbtv.com
+
+📢 MICHIGAN MIDDAY ( SETIAP HARI )
+Tutup Pasaran : 23:50 WIB
+Result : 23:59 WIB
+www.michiganlottery.com
+
+📢 NEW JERSEY MIDDAY ( SETIAP HARI )
+Tutup Pasaran : 23:50 WIB
+Result : 23:59 WIB
+www.njlottery.com
+            </pre>
+        </div>
+    </div>
+</div>
+
+<!-- POPUP HADIAH -->
+<div id="hadiahModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('hadiahModal')">&times;</span>
+
+        <h2>🎁 HADIAH TOGEL</h2>
+		<br>
+        <div class="modal-scroll">
+            <pre>
+📍 HADIAH BET FULL :
+ • 4D = x9.900
+ • 3D = x990
+ • 2D = x99
+
+📍 HADIAH BET PRIZE:
+Khusus untuk pasaran  CAMBODIA, SYDNEY, CHINA, JAPAN, SINGAPORE, TAIWAN, HONGKONG 4D(Rabu, Sabtu, Minggu)
+PRIZE 1
+ • 4D : 6.500x
+ • 3D : 650x
+ • 2D : 70x
+PRIZE 2
+ • 4D : 2.100x
+ • 3D : 210x
+ • 2D : 20x
+PRIZE 3
+ • 4D : 1.100x
+ • 3D : 110x
+ • 2D : 8x
+
+📍 HADIAH BB ( BOLAK BALIK ) :
+ • 4D ( TEPAT ) = x4.000 | 4D ( BB ) = x200
+ • 3D ( TEPAT )= x400 | 3D ( BB ) = x100
+ • 2D ( TEPAT )= x70 | 2d ( BB ) = x20
+
+📍 HADIAH DISKON : 
+ • 4D = x3.000
+ • 3D = x400
+ • 2D = x70
+(2D Depan = x65 | 2D Tengah = x65 )
+ • 50-50 = x1
+( Kenak Kei = -2.5% )
+ • COLOK BEBAS = x1.53
+(Colok Bebas (2D)= x7 | Colok Bebas (3D) = x10 | Colok Bebas (4D)= x18)
+ • KOMBINASI = x2.6
+ • COLOK JITU = x8
+ • COLOK NAGA
+(Colok Naga (3D) = x22 | Colok Naga (4D) = x35 | Macau Shio = x110)
+ • TEPI TENGAH = x1
+( Kenak Kei = -2.5% )
+ • SHIO = x9
+ • SILANG HOMO = x1
+( Kenak Kei = -2.5% )
+ • KEMBANG KEMPIS = x1
+( Kembang - Kempis kenak kei = -2.5% | Kembar Depan-Belakang-Tengah Dapat Kei = 40% )
+ • DASAR = x1
+( Ganjil Kenak Kei = -25% Besar Kenak Kei = -25% | Genap Dapat Kei = 10% Kecil Dapat Kei = 10% )
+
+
+HADIAH 5D TOTO MACAU MODE BET FULL :💥 
+💥 5D : X 88,000
+💥 4D : x 9,000
+💥 3D : x 950
+💥 2D : x 95
+💥 Colok Bebas : x0.9
+💥 Colok Bebas ( 2D )(2 nomor ): x4
+💥 Colok Bebas ( 2D )(3 nomor ): x6
+💥 Colok Bebas ( 2D )(4 nomor ): x20
+💥 Colok Bebas ( 2D )(5 nomor ): x200
+💥 Colok Bebas ( 4D )(4 nomor ): x50
+💥 Colok Bebas ( 4D )(5 nomor ): x200
+💥(Colok Naga (3D) = x9 | Colok Naga (4D) = x20
+💥 2 Kombinasi : x2.7 
+💥 Colok Jitu : x8
+💥TEPI TENGAH = x1
+( Kenak Kei = -2.2% )
+💥 SHIO = x10
+💥 DASAR =x1
+( Ganjil Kenak Kei = -25% Besar Kenak Kei = -25% | Genap Dapat Kei = 10% Kecil Dapat Kei = 10% )
+
+HADIAH 5D TOTO MACAU MODE BET DISKON :
+💥 5D : X 50.000
+💥 4D : X 7.000
+💥 3D : X 750
+💥 2D : X 75
+
+HADIAH MODE BET BOLAK BALIK (BB) :💥
+💥 5D ( TEPAT ) : X 50,000
+💥 5D ( BB )    : X 350
+💥 4D ( TEPAT ) : x5.000
+💥 4D ( BB)     : x180
+💥 3D ( TEPAT ) : x 500
+💥 3D ( BB)     : x 75
+💥 2D (TEPAT)   : x80
+💥 2D (BB)      : x15
+
+DISKON UNTUK BET DISKON ( HANYA BET DISKON BARU DAPAT DISKON) :
+💥 5D : 38%
+💥 4D : 20%
+💥 3D : 20% 
+💥 2D : 20%
+            </pre>
+        </div>
+    </div>
+</div>
+
+<!-- POPUP LINK AKTIF-->
+<div id="ListLinkModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('ListLinkModal')">&times;</span>
+
+        <h2>📅 LIST LINK</h2>
+		<br>
+        <div class="modal-scroll">
+
+    <div class="link-item">
+        <span>LOGIN MEMBER</span>
+        <div class="link-actions">
+            <a href="https://gesya.me/mnttutama" target="_blank" class="open-link">BUKA</a>
+            <button class="copy-btn" onclick="copyText(this,'https://gesya.me/mnttutama')">COPY</button>
+        </div>
+    </div>
+
+    <div class="link-item">
+        <span>RTP</span>
+        <div class="link-actions">
+            <a href="https://gesya.me/mnttrtp" target="_blank" class="open-link">BUKA</a>
+            <button class="copy-btn" onclick="copyText(this,'https://gesya.me/mnttrtp')">COPY</button>
+        </div>
+    </div>
+
+    <div class="link-item">
+        <span>PREDIKSI</span>
+        <div class="link-actions">
+            <a href="https://gesya.me/mnttpredik" target="_blank" class="open-link">BUKA</a>
+            <button class="copy-btn" onclick="copyText(this,'https://gesya.me/mnttpredik')">COPY</button>
+        </div>
+    </div>
+
+    <div class="link-item">
+        <span>BUKTI JP</span>
+        <div class="link-actions">
+            <a href="https://gesya.me/mnttjp" target="_blank" class="open-link">BUKA</a>
+            <button class="copy-btn" onclick="copyText(this,'https://gesya.me/mnttjp')">COPY</button>
+        </div>
+    </div>
+
+    <div class="link-item">
+        <span>PROMOSI</span>
+        <div class="link-actions">
+            <a href="https://gesya.me/mnttpromo" target="_blank" class="open-link">BUKA</a>
+            <button class="copy-btn" onclick="copyText(this,'https://gesya.me/mnttpromo')">COPY</button>
+        </div>
+    </div>
+
+    <div class="link-item">
+        <span>PANDUAN</span>
+        <div class="link-actions">
+            <a href="https://gesya.me/panduanmini" target="_blank" class="open-link">BUKA</a>
+            <button class="copy-btn" onclick="copyText(this,'https://gesya.me/panduanmini')">COPY</button>
+        </div>
+    </div>
+
+    <div class="link-item">
+        <span>LIVE CHAT</span>
+        <div class="link-actions">
+            <a href="https://gesya.me/livechatmntt" target="_blank" class="open-link">BUKA</a>
+            <button class="copy-btn" onclick="copyText(this,'https://gesya.me/livechatmntt')">COPY</button>
+        </div>
+    </div>
+
+    <div class="link-item">
+        <span>KONTAK MINITOTO</span>
+        <div class="link-actions">
+            <a href="https://gesya.me/kontakminitoto" target="_blank" class="open-link">BUKA</a>
+            <button class="copy-btn" onclick="copyText(this,'https://gesya.me/kontakminitoto')">COPY</button>
+        </div>
+    </div>
+
+    <div class="link-item">
+        <span>APK</span>
+        <div class="link-actions">
+            <a href="https://gesya.me/apkminitoto" target="_blank" class="open-link">BUKA</a>
+            <button class="copy-btn" onclick="copyText(this,'https://gesya.me/apkminitoto')">COPY</button>
+        </div>
+    </div>
+
+</div>
+</div>
+</div>
+
 
 <!-- POPUP BANK & EWALLET -->
 <div id="bankEwalletModal" class="modal">
