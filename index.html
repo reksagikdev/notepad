@@ -668,6 +668,14 @@ body::before{
             <button class="copy-btn" onclick="copyText(this, 'silakan login dulu ke apknya bosku, kemudian screenshot full tampilannya dan kirim kesini ya')">COPY</button>
         </div>
 		
+		<div class="menu-togel">
+    <button type="button"
+            class="menu-btn"
+            onclick="openModal('contohScreenshotModal')">
+        CONTOH SCREENSHOT
+    </button>
+</div>
+		
 		<div class="box">
             <span>Dicekkan id bosku sudah pernah claim sebelumnya ya jadi tidak bisa lagi, satu id hanya bisa sekali claim saja ya bosku</span>
             <button class="copy-btn" onclick="copyText(this, 'dicekkan id bosku sudah pernah claim sebelumnya ya jadi tidak bisa lagi, satu id hanya bisa sekali claim saja ya bosku')">COPY</button>
@@ -1012,8 +1020,34 @@ onclick="openModal('hadiahModal')">
 </button>
 </div>
 
+<div class="menu-togel">
+    <button type="button" class="menu-btn"
+            onclick="openModal('formVerifModal')">
+        FORM VERIF
+    </button>
 </div>
 
+</div>
+
+	<!-- POPUP CONTOH SCREENSHOT -->
+<div id="contohScreenshotModal" class="modal">
+    <div class="modal-content">
+
+        <span class="close"
+              onclick="closeModal('contohScreenshotModal')">&times;</span>
+
+        <h2>📷 CONTOH SCREENSHOT</h2>
+
+        <div class="modal-scroll" style="text-align:center;">
+
+            <img src="poto/gambar1.png"
+                 alt="Contoh Screenshot"
+                 style="max-width:100%; border-radius:12px;">
+
+        </div>
+
+    </div>
+</div>
 
     <!-- NOTE PAD 4 -->
     <div class="note-pad">
@@ -1349,22 +1383,47 @@ function showBuktiTransfer(nama, gambar){
 
         <div class="modal-scroll">
 
-<pre id="formBajuText">Username:
-Nama:
-Nomor HP:
-Alamat:
-RT/RW:
-Kecamatan:
-Kabupaten:
-Provinsi:
-Kode Pos:
-Ukuran Baju:
+<pre id="formBajuText">Username: 
+Nama: 
+Nomor HP: 
+Alamat: 
+RT/RW: 
+Kecamatan: 
+Kabupaten: 
+Provinsi: 
+Kode Pos: 
+Ukuran Baju: 
 
-Patokan:
+Patokan: 
 Link Sharelok: </pre>
 
 <button class="copy-btn"
 onclick="copyText(this, document.getElementById('formBajuText').innerText)">
+COPY
+</button>
+
+        </div>
+    </div>
+</div>
+
+<!-- POPUP FORM VERIF -->
+<div id="formVerifModal" class="modal">
+    <div class="modal-content">
+        <span class="close"
+              onclick="closeModal('formVerifModal')">&times;</span>
+
+        <h2>FORM VERIF</h2>
+
+        <div class="modal-scroll">
+
+<pre id="formVerifText">ID: 
+REKENING: 
+PASARAN:  
+TANGGAL: 
+INDIKASI: MURNI</pre>
+
+<button class="copy-btn"
+onclick="copyText(this, document.getElementById('formVerifText').innerText)">
 COPY
 </button>
 
