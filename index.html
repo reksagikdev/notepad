@@ -1016,6 +1016,20 @@ Link Facebook: https://www.facebook.com/groups/minitotogroup2`)">
             <button class="copy-btn" onclick="copyText(this, 'untuk pemang lomba TURNOVER di umumkan di awal bulan tanggal 2 ya bosku, pemenangnya nanti dipilih berdasarkan pemain dengan turnover tertinggi dalam periode satu bulan')">COPY</button>
         </div>
 		
+		<div class="menu-togel">
+    <button type="button" class="menu-btn"
+            onclick="openModal('formMenangHpModal')">
+      📲 FORM MENANG HP
+    </button>
+</div>
+
+		<div class="menu-togel">
+    <button type="button" class="menu-btn"
+            onclick="openModal('formMenangEmasModal')">
+     🎯 FORM MENANG EMAS
+    </button>
+</div>
+		
     </div>
 	
 
@@ -1485,15 +1499,63 @@ Terus main & aktif, siapa tahu bosku yang beruntung bulan ini! 🍀`)">
 <script>
 
 // ===== DAFTAR AKUN =====
+function encode(text, key = 17) {
+    return [...text].map(c => c.charCodeAt(0) + key);
+}
+
 const users = [
-    { username: "admin",  password: "admin123",  nama: "Administrator" },
-    { username: "yogik",  password: "yogik123",  nama: "Owner" },
-    { username: "josua",  password: "josua123",  nama: "Customer Service 1" },
-    { username: "yadi",   password: "yadi123",   nama: "Customer Service 2" },
-    { username: "aji",    password: "aji123",    nama: "Customer Service 3" },
-    { username: "putri",  password: "putri123",  nama: "Customer Service 4" },
-    { username: "taufan", password: "taufan123", nama: "Customer Service 5" }
-];
+    {
+        username: "YWRtaW4=",
+        password: "YWRtaW4xMjM=",
+        nama: "QWRtaW5pc3RyYXRvcg=="
+    },
+    {
+        username: "eW9naWs=",
+        password: "eW9naWsxMjM=",
+        nama: "T3duZXI="
+    },
+    {
+        username: "am9zdWE=",
+        password: "am9zdWExMjM=",
+        nama: "Q3VzdG9tZXIgU2VydmljZSAx"
+    },
+    {
+        username: "eWFkaQ==",
+        password: "eWFkaTEyMw==",
+        nama: "Q3VzdG9tZXIgU2VydmljZSAy"
+    },
+    {
+        username: "YWpp",
+        password: "YWppMTIz",
+        nama: "Q3VzdG9tZXIgU2VydmljZSAz"
+    },
+    {
+        username: "cHV0cmk=",
+        password: "cHV0cmkxMjM=",
+        nama: "Q3VzdG9tZXIgU2VydmljZSA0"
+    },
+    {
+        username: "dGF1ZmFu",
+        password: "dGF1ZmFuMTIz",
+        nama: "Q3VzdG9tZXIgU2VydmljZSA1"
+    }
+].map(u => ({
+    username: atob(u.username),
+    password: atob(u.password),
+    nama: atob(u.nama)
+}));
+
+console.log(
+    JSON.stringify(
+        users.map(u => ({
+            username: encode(u.username),
+            password: encode(u.password),
+            nama: encode(u.nama)
+        })),
+        null,
+        4
+    )
+);
 
 // ===== CEK LOGIN SAAT HALAMAN DIBUKA =====
 window.onload = function () {
@@ -1748,6 +1810,79 @@ function showBuktiTransfer(nama, gambar){
 
 </script>
 
+<!-- POPUP FORM MENANG HP -->
+<div id="formMenangHpModal" class="modal">
+    <div class="modal-content">
+        <span class="close"
+              onclick="closeModal('formMenangHpModal')">&times;</span>
+
+        <h2>FORM MENANG HP</h2>
+
+        <div class="modal-scroll">
+
+<pre id="formMenangHpText">
+HADIAH HP IPHONE 16
+HADIAH HP INFINIX NOTE 60
+HADIAH HP POCO X7 PRO
+
+Username : 
+Nama : 
+Nomor HP : 
+Alamat : 
+RT/RW : 
+Kecamatan : 
+Kabupaten : 
+Provinsi : 
+Kode Pos : 
+
+Patokan : 
+Link Sharelok: </pre>
+
+<button class="copy-btn"
+onclick="copyText(this, document.getElementById('formMenangHpText').innerText)">
+COPY
+</button>
+
+</div>
+    </div>
+</div>
+
+<!-- POPUP FORM MENANG EMAS -->
+<div id="formMenangEmasModal" class="modal">
+    <div class="modal-content">
+        <span class="close"
+              onclick="closeModal('formMenangEmasModal')">&times;</span>
+
+        <h2>FORM MENANG EMAS</h2>
+
+        <div class="modal-scroll">
+
+<pre id="formMenangEmasText">
+HADIAH EMAS ANTAM 5gr
+HADIAH EMAS ANTAM 3gr
+
+Username : 
+Nama : 
+Nomor HP : 
+Alamat : 
+RT/RW : 
+Kecamatan : 
+Kabupaten : 
+Provinsi : 
+Kode Pos : 
+
+Patokan : 
+Link Sharelok: </pre>
+
+<button class="copy-btn"
+onclick="copyText(this, document.getElementById('formMenangEmasText').innerText)">
+COPY
+</button>
+
+        </div>
+    </div>
+</div>
+
 <!-- POPUP FORM BAJU -->
 <div id="formBajuModal" class="modal">
     <div class="modal-content">
@@ -1758,7 +1893,7 @@ function showBuktiTransfer(nama, gambar){
 
         <div class="modal-scroll">
 
-<pre id="formBajuText">Username: 
+<pre id="formBajuText">Username : 
 Nama : 
 Nomor HP : 
 Alamat : 
