@@ -546,13 +546,303 @@ body::before{
     background:#00c57d;
 }
 
+/*================ LOGIN =================*/
+
+.login-page{
+    position:fixed;
+    inset:0;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:url("bg/gambar1.jpg") center/cover no-repeat;
+
+    z-index:99999;
+}
+
+.login-page::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,.65);
+    backdrop-filter:blur(5px);
+}
+
+.login-box{
+    position:relative;
+
+    width:420px;
+    max-width:90%;
+
+    padding:35px;
+
+    border-radius:25px;
+
+    background:rgba(0,0,0,.55);
+
+    border:2px solid rgba(255,255,255,.12);
+
+    backdrop-filter:blur(18px);
+
+    box-shadow:
+        0 0 35px rgba(0,123,255,.35),
+        0 0 15px rgba(255,255,255,.08);
+
+    text-align:center;
+}
+
+.login-logo{
+
+    font-size:55px;
+
+    margin-bottom:10px;
+
+    filter:drop-shadow(0 0 10px rgba(255,255,255,.35));
+
+}
+
+.login-title{
+
+    font-family:'Orbitron',sans-serif;
+
+    font-size:30px;
+
+    color:#fff;
+
+    letter-spacing:2px;
+
+    margin-bottom:25px;
+
+    text-shadow:
+        0 0 10px rgba(0,153,255,.6);
+
+}
+
+.login-box input{
+
+    width:100%;
+
+    padding:14px 16px;
+
+    margin-bottom:16px;
+
+    border-radius:14px;
+
+    border:1px solid rgba(255,255,255,.15);
+
+    outline:none;
+
+    font-size:17px;
+
+    color:#fff;
+
+    background:rgba(255,255,255,.08);
+
+    transition:.25s;
+}
+
+.login-box input::placeholder{
+
+    color:#cfcfcf;
+
+}
+
+.login-box input:focus{
+
+    border-color:#00c6ff;
+
+    box-shadow:0 0 12px rgba(0,198,255,.45);
+
+}
+
+.login-btn{
+
+    width:100%;
+
+    padding:14px;
+
+    border:none;
+
+    border-radius:14px;
+
+    cursor:pointer;
+
+    font-size:17px;
+
+    font-weight:bold;
+
+    color:#fff;
+
+    background:linear-gradient(
+        135deg,
+        #007bff,
+        #2196f3,
+        #42a5ff
+    );
+
+    box-shadow:
+        0 0 15px rgba(0,123,255,.35);
+
+    transition:.25s;
+}
+
+.login-btn:hover{
+
+    transform:translateY(-2px);
+
+    box-shadow:
+        0 0 20px rgba(0,123,255,.6);
+
+}
+
+#loginError{
+
+    margin-top:15px;
+
+    color:#ff7070;
+
+    font-weight:bold;
+
+}
+
+.login-footer{
+
+    margin-top:18px;
+
+    color:#aaa;
+
+    font-size:13px;
+
+}
+
+.logout-btn{
+    position: fixed;
+    top: 18px;
+    right: 20px;
+    z-index: 9999;
+
+    padding: 10px 20px;
+    border: none;
+    border-radius: 12px;
+
+    background: linear-gradient(135deg,#22c55e,#16a34a);
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+
+    box-shadow: 0 8px 20px rgba(34,197,94,.35);
+    transition: .25s;
+}
+
+.logout-btn:hover{
+    transform: translateY(-2px);
+    background: linear-gradient(135deg,#4ade80,#16a34a);
+}
+
+#app{
+    position: relative;
+}
+
+.logout-btn{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+
+    padding:10px 20px;
+    border:none;
+    border-radius:12px;
+
+    background:linear-gradient(135deg,#22c55e,#16a34a);
+    color:#fff;
+    font-weight:600;
+    cursor:pointer;
+    z-index:1000;
+}
+
+.password-box{
+    position: relative;
+    width: 100%;
+}
+
+.password-box input{
+    width: 100%;
+    padding-right: 45px;
+    box-sizing: border-box;
+}
+
+.toggle-password{
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 18px;
+    color: #777;
+    user-select: none;
+    z-index: 10;
+}
+
+.toggle-password:hover{
+    color: #22c55e;
+}
+
 </style>
 </head>
 <body>
 
+<div id="loginPage" class="login-page">
+
+    <div class="login-box">
+
+        <div class="login-logo">📝</div>
+
+        <div class="login-title">
+            NOTEPAD YOGIK
+        </div>
+
+        <input
+            type="text"
+            id="username"
+            placeholder="Masukkan ID">
+
+        <div class="password-box">
+    <input
+        type="password"
+        id="password"
+        placeholder="Masukkan Password">
+
+    <span class="toggle-password" onclick="togglePassword()">
+        👁️
+    </span>
+</div>
+
+        <button
+            class="login-btn"
+            onclick="login()">
+
+            LOGIN
+
+        </button>
+
+        <div id="loginError"></div>
+
+        <div class="login-footer">
+            Internal Access Only
+        </div>
+
+    </div>
+
+</div>
+
+<div id="app" style="display:none;">
+
+<button class="logout-btn" onclick="logout()">
+    Logout
+</button>
+
 <h1 class="title">
-    <span class="logo">📝</span>
-    NOTEPAD YOGIK 
+    NOTEPAD YOGIK
 </h1>
 
 <div class="container">
@@ -1193,6 +1483,91 @@ Terus main & aktif, siapa tahu bosku yang beruntung bulan ini! 🍀`)">
 </div>
 
 <script>
+
+// ===== DAFTAR AKUN =====
+const users = [
+    { username: "admin",  password: "admin123",  nama: "Administrator" },
+    { username: "yogik",  password: "yogik123",  nama: "Owner" },
+    { username: "josua",  password: "josua123",  nama: "Customer Service 1" },
+    { username: "yadi",   password: "yadi123",   nama: "Customer Service 2" },
+    { username: "aji",    password: "aji123",    nama: "Customer Service 3" },
+    { username: "putri",  password: "putri123",  nama: "Customer Service 4" },
+    { username: "taufan", password: "taufan123", nama: "Customer Service 5" }
+];
+
+// ===== CEK LOGIN SAAT HALAMAN DIBUKA =====
+window.onload = function () {
+
+    if (localStorage.getItem("login") === "true") {
+
+        document.getElementById("loginPage").style.display = "none";
+        document.getElementById("app").style.display = "block";
+
+    }
+
+};
+
+// ===== LOGIN =====
+function login() {
+
+    const user = document.getElementById("username").value.trim();
+    const pass = document.getElementById("password").value.trim();
+
+    const account = users.find(u =>
+        u.username === user &&
+        u.password === pass
+    );
+
+    if (account) {
+
+        localStorage.setItem("login", "true");
+        localStorage.setItem("namaUser", account.nama);
+
+        document.getElementById("loginPage").style.display = "none";
+        document.getElementById("app").style.display = "block";
+
+    } else {
+
+        document.getElementById("loginError").innerHTML =
+            "❌ Username atau Password salah";
+
+    }
+
+}
+
+function togglePassword(){
+
+    const password = document.getElementById("password");
+    const icon = document.querySelector(".toggle-password");
+
+    if(password.type === "password"){
+        password.type = "text";
+        icon.innerHTML = "🙈";
+    }else{
+        password.type = "password";
+        icon.innerHTML = "👁️";
+    }
+
+}
+
+// ===== LOGOUT =====
+function logout() {
+
+    localStorage.removeItem("login");
+    localStorage.removeItem("namaUser");
+
+    location.reload();
+
+}
+
+// ===== ENTER UNTUK LOGIN =====
+document.addEventListener("keydown", function (e) {
+
+    if (e.key === "Enter") {
+        login();
+    }
+
+});
 
 function copyText(button, text){
 
