@@ -726,6 +726,20 @@ Link Facebook: https://www.facebook.com/groups/minitotogroup2`)">
             <button class="copy-btn" onclick="copyText(this, 'untuk pemang lomba TURNOVER di umumkan di awal bulan tanggal 2 ya bosku, pemenangnya nanti dipilih berdasarkan pemain dengan turnover tertinggi dalam periode satu bulan')">COPY</button>
         </div>
 		
+   <div class="menu-togel">
+    <button type="button" class="menu-btn"
+            onclick="openModal('formMenangHpModal')">
+      📲 FORM MENANG HP
+    </button>
+</div>
+
+		<div class="menu-togel">
+    <button type="button" class="menu-btn"
+            onclick="openModal('formMenangEmasModal')">
+     🎯 FORM MENANG EMAS
+    </button>
+</div>
+		
     </div>
 	
 
@@ -1372,6 +1386,79 @@ function showBuktiTransfer(nama, gambar){
 }
 
 </script>
+
+<!-- POPUP FORM MENANG HP -->
+<div id="formMenangHpModal" class="modal">
+    <div class="modal-content">
+        <span class="close"
+              onclick="closeModal('formMenangHpModal')">&times;</span>
+
+        <h2>FORM MENANG HP</h2>
+
+        <div class="modal-scroll">
+
+<pre id="formMenangHpText">
+HADIAH HP IPHONE 16
+HADIAH HP INFINIX NOTE 60
+HADIAH HP POCO X7 PRO
+
+Username : 
+Nama : 
+Nomor HP : 
+Alamat : 
+RT/RW : 
+Kecamatan : 
+Kabupaten : 
+Provinsi : 
+Kode Pos : 
+
+Patokan : 
+Link Sharelok: </pre>
+
+<button class="copy-btn"
+onclick="copyText(this, document.getElementById('formMenangHpText').innerText)">
+COPY
+</button>
+
+</div>
+    </div>
+</div>
+
+<!-- POPUP FORM MENANG EMAS -->
+<div id="formMenangEmasModal" class="modal">
+    <div class="modal-content">
+        <span class="close"
+              onclick="closeModal('formMenangEmasModal')">&times;</span>
+
+        <h2>FORM MENANG EMAS</h2>
+
+        <div class="modal-scroll">
+
+<pre id="formMenangEmasText">
+HADIAH EMAS ANTAM 5gr
+HADIAH EMAS ANTAM 3gr
+
+Username : 
+Nama : 
+Nomor HP : 
+Alamat : 
+RT/RW : 
+Kecamatan : 
+Kabupaten : 
+Provinsi : 
+Kode Pos : 
+
+Patokan : 
+Link Sharelok: </pre>
+
+<button class="copy-btn"
+onclick="copyText(this, document.getElementById('formMenangEmasText').innerText)">
+COPY
+</button>
+
+        </div>
+    </div>
+</div>
 
 <!-- POPUP FORM BAJU -->
 <div id="formBajuModal" class="modal">
